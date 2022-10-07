@@ -150,13 +150,13 @@
           @click="open = false"
           class="animate__animated animate__fadeIn delay-3 hover:text-PrimaryVariant/80 duration-150"
         >
-          <nuxt-link to="/aboutus">About Lady Bravo</nuxt-link>
+          <nuxt-link to="about">About Lady Bravo</nuxt-link>
         </li>
         <li
           @click="open = false"
           class="animate__animated animate__fadeIn delay-4 hover:text-PrimaryVariant/80 duration-150"
         >
-          <nuxt-link to="/contact">Contact</nuxt-link>
+          <nuxt-link to="contact">Contact</nuxt-link>
         </li>
       </ul>
     </div>

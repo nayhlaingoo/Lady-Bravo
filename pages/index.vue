@@ -3,7 +3,7 @@
     <Hero />
     <Category />
     <Counter :seconds="60" :minutes="60" :hours="24" :days="30" />
-    <BestSeller />
+    <BestSeller title="Best Seller" />
     <VdayDiscount />
     <Newsletter />
     <PaymentLogo />

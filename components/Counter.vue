@@ -7,8 +7,6 @@
       class="text-SecondaryVariant absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center w-full"
     >
       <p class="text-center font-Playfair tracking-widest text-5xl px-5">
-        <!-- “There is nothing better than a friend, <br />
-          unless it is a friend with chocolate.” -->
         Coming Soon
       </p>
       <p class="font-Roboto text-xl mt-7 mb-4">Next arrival</p>
@@ -83,9 +81,6 @@ export default {
         this.displayHours = this.hours
         this.displayDays = this.days
         this.loaded = true
-        // this.displaysec = this.formatNum(this.displaysec)
-        // this.displaymin = this.formatNum(this.displaymin)
-        // this.displayHours = this.formatNum(this.displayHours)
       }, 1000)
     },
   },

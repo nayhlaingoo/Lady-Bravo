@@ -87,7 +87,7 @@
                 :class="imgBtnHover3 === true ? 'bg-bgPri text-black' : ''"
                 class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
               >
-                Worldwide
+                Cadbury
               </button>
             </div>
             <div class="w-1/2 relative">
@@ -103,7 +103,7 @@
                 :class="imgBtnHover4 === true ? 'bg-bgPri text-black' : ''"
                 class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
               >
-                Brand
+                Rocher
               </button>
             </div>
           </div>
@@ -164,7 +164,7 @@
               :class="imgBtnHover3 === true ? 'bg-bgPri text-black' : ''"
               class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
             >
-              Worldwide
+              Cadbury
             </button>
           </div>
 
@@ -181,7 +181,7 @@
               :class="imgBtnHover4 === true ? 'bg-bgPri text-black' : ''"
               class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
             >
-              Brand
+              Rocher
             </button>
           </div>
         </div>

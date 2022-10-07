@@ -25,7 +25,7 @@
         </div>
         <ul>
           <li @click="$emit('close')" class="cursor-pointer w-fit py-1.5">
-            <nuxt-link to="/catalog/page-1">All Products</nuxt-link>
+            <nuxt-link to="product">All Products</nuxt-link>
           </li>
           <li @click="$emit('close')" class="cursor-pointer w-fit py-1.5">
             <a href="#">Made In Belgium</a>

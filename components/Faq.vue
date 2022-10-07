@@ -1,7 +1,7 @@
 <template>
   <div class="my-16">
     <div
-      class="lg:flex justify-center items-center gap-20 xl:w-[1024px] w-[80%] mx-auto text-Secondary font-Playfair"
+      class="lg:flex justify-center items-center gap-20 xl:w-[1024px] w-full px-4 mx-auto text-Secondary font-Playfair"
     >
       <div class="self-start lg:max-w-[400px] lg:mb-0 mb-10">
         <p class="font-Great text-xl">
@@ -23,7 +23,7 @@
           class="border-SecondaryVariant border rounded xs:px-5 px-2 cursor-pointer relative"
         >
           <div
-            class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:scale-95 duration-300"
+            class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:scale-[.98] duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@
           class="border-SecondaryVariant border rounded xs:px-5 px-2 cursor-pointer"
         >
           <div
-            class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:scale-95 duration-300"
+            class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:scale-[.98] duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@
           class="border-SecondaryVariant border rounded xs:px-5 px-2 cursor-pointer"
         >
           <div
-            class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:scale-95 duration-300"
+            class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:scale-[.98] duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +190,7 @@
           class="border-SecondaryVariant border rounded xs:px-5 px-2 cursor-pointer"
         >
           <div
-            class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:scale-95 duration-300"
+            class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:scale-[.98] duration-300"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

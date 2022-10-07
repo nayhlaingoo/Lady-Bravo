@@ -73,11 +73,11 @@
       </div>
 
       <div
-        class="border-slate-400/20 border-t pt-5 my-5 font-accent flex flex-row justify-between items-center"
+        class="border-slate-400/20 border-t pt-5 my-5 font-accent md:flex flex-row flex-wrap justify-between items-center"
       >
         <p class="text-secondary text-xs">Copyright © 2022 LadyBravo Ltd.</p>
         <div class="w-1/2 sm:w-1/3 md:w-1/4">
-          <div class="flex justify-evenly items-center w-full">
+          <div class="flex md:justify-end items-center gap-2 md:gap-10 w-full md:pr-10 mt-5 md:mt-0">
             <nuxt-link
               class="bg-SecondaryVariant/50 hover:bg-SecondaryVariant/90 duration-200 w-7 h-7 p-1.5 rounded-full shadow-md flex justify-center items-center"
               to=""

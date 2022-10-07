@@ -1,0 +1,461 @@
+[
+    {
+        "id": 1,
+        "title": "Ferrero Rocher",
+        "category": "Ferrero Rocher",
+        "img": "../rocher-1.jpg",
+        "name": "Rocher",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Ferrero Rocher extra small size (5 pieces)",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 2,
+        "title": "Ferrero Rocher",
+        "category": "Ferrero Rocher",
+        "img": "../rocher-1.jpg",
+        "name": "Rocher",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Ferrero Rocher small size (10 pieces)",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 3,
+        "title": "Ferrero Rocher",
+        "category": "Ferrero Rocher",
+        "img": "../rocher-1.jpg",
+        "name": "Rocher",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Ferrero Rocher medium size (18 pieces)",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 4,
+        "title": "Ferrero Rocher",
+        "category": "Ferrero Raffaello",
+        "img": "../rocher-1.jpg",
+        "name": "Raffaello",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Ferrero Rocher large size (30 pieces)",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 5,
+        "title": "Ferrero Rocher",
+        "category": "Ferrero Raffaello",
+        "img": "../rocher-1.jpg",
+        "name": "Raffaello",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Ferrero Raffaello medium size (10 pieces)",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 6,
+        "title": "Ferrero Rocher",
+        "category": "Ferrero Raffaello",
+        "img": "../rocher-1.jpg",
+        "name": "Raffaello",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Ferrero Raffaello large size (28 pieces)",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 7,
+        "title": "Cadbury",
+        "category": "Cadbury",
+        "img": "../cadburyimg.jpg",
+        "name": "Cadbury",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Cadbury dairy milk chocolate",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 8,
+        "title": "Cadbury",
+        "category": "Cadbury",
+        "img": "../cadburyimg.jpg",
+        "name": "Cadbury",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Cadbury dairy milk (Fruit & Nut) chocolate",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 9,
+        "title": "Cadbury",
+        "category": "Cadbury",
+        "img": "../cadburyimg.jpg",
+        "name": "Cadbury",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Cadbury dairy milk (Hazelnut) chocolate",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 10,
+        "title": "Cadbury",
+        "category": "Cadbury",
+        "img": "../cadburyimg.jpg",
+        "name": "Cadbury",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Cadbury dairy milk (Honeycomb & Nuts) chocolate",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 11,
+        "title": "Cadbury",
+        "category": "Cadbury",
+        "img": "../cadburyimg.jpg",
+        "name": "Cadbury",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Cadbury dairy milk (Bubbly) chocolate",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 12,
+        "title": "Cadbury",
+        "category": "Cadbury",
+        "img": "../cadburyimg.jpg",
+        "name": "Cadbury",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "Cadbury dairy milk (Oreo) chocolate",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 13,
+        "title": "KitKat",
+        "category": "KitKat",
+        "img": "../kitkatimg.jpg",
+        "name": "KitKat",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is KitKat chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 14,
+        "title": "KitKat",
+        "category": "KitKat",
+        "img": "../kitkatimg.jpg",
+        "name": "KitKat",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is KitKat chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 15,
+        "title": "KitKat",
+        "category": "KitKat",
+        "img": "../kitkatimg.jpg",
+        "name": "KitKat",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is KitKat chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 16,
+        "title": "MNM",
+        "category": "MNM",
+        "img": "../mnmimg.jpg",
+        "name": "MNM",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is MNM chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 17,
+        "title": "MNM",
+        "category": "MNM",
+        "img": "../mnmimg.jpg",
+        "name": "MNM",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is MNM chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 18,
+        "title": "MNM",
+        "category": "MNM",
+        "img": "../mnmimg.jpg",
+        "name": "MNM",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is MNM chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 19,
+        "title": "Lindt",
+        "category": "Lindt",
+        "img": "../lindtimg.jpg",
+        "name": "Lindt",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is Lindt chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 20,
+        "title": "Lindt",
+        "category": "Lindt",
+        "img": "../lindtimg.jpg",
+        "name": "Lindt",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is Lindt chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 21,
+        "title": "Lindt",
+        "category": "Lindt",
+        "img": "../lindtimg.jpg",
+        "name": "Lindt",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is Lindt chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 22,
+        "title": "Mars",
+        "category": "Mars",
+        "img": "../marsimg.jpg",
+        "name": "Mars",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is Mars chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 23,
+        "title": "Mars",
+        "category": "Mars",
+        "img": "../marsimg.jpg",
+        "name": "Mars",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is Mars chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 24,
+        "title": "Mars",
+        "category": "Mars",
+        "img": "../marsimg.jpg",
+        "name": "Mars",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is Mars chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 25,
+        "title": "Present",
+        "category": "Present",
+        "img": "../bdaychoco.jpg",
+        "name": "Gift",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is Present Gift chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 26,
+        "title": "Present",
+        "category": "Present",
+        "img": "../vdaychoco.jpg",
+        "name": "Gift",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is Present Gift chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    },
+    {
+        "id": 27,
+        "title": "Present",
+        "category": "Present",
+        "img": "../christmas.jpg",
+        "name": "Gift",
+        "price": "4200ks",
+        "detail": [
+            "Brand: Made in Italy",
+            "Weight: 120 g",
+            "Height: 6 cm",
+            "Lenght: 4 cm",
+            "Width: 7 cm"
+        ],
+        "caption": "This is Present Gift chocolate caption",
+        "description": "Lorem ipsum, dolor sit 60 Grams consectetur adipisicing elit. Nam non asperiores velit architecto porro."
+    }
+]

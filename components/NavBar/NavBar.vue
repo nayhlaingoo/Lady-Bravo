@@ -87,6 +87,7 @@
               />
             </transition>
           </div>
+          <slot />
         </ul>
       </div>
       <div class="w-24 cursor-pointer">
@@ -101,10 +102,10 @@
       <div class="font-Playfair">
         <ul class="flex items-center">
           <li class="px-4 hover:text-PrimaryVariant/80 duration-150">
-            <nuxt-link to="/aboutus">About Lady Bravo</nuxt-link>
+            <nuxt-link to="about">About Lady Bravo</nuxt-link>
           </li>
           <li class="px-4 hover:text-PrimaryVariant/80 duration-150">
-            <nuxt-link to="/contact">Contact</nuxt-link>
+            <nuxt-link to="contact">Contact</nuxt-link>
           </li>
           <div @click="cart = !cart" class="cursor-pointer">
             <svg
