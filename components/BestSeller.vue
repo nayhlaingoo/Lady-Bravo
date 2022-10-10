@@ -24,7 +24,7 @@
               <img
                 :class="hoverImg === index ? 'blur-sm' : 'blur-none'"
                 class="w-full h-full object-cover duration-300"
-                :src="data.img"
+                :src="data.img[0]"
                 alt=""
               />
               <transition
@@ -48,11 +48,11 @@
           </div>
         </div>
         <div class="bg-SecondaryVariant mt-16 mx-auto w-[85%] h-px relative">
-          <button
-            class="border-SecondaryVariant bg-white absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 border hover:border-Primary text-Secondary font-Roboto hover:bg-Primary hover:text-white rounded-sm w-32 px-3 py-1.5 duration-300"
+          <div
+            class="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
           >
-            <nuxt-link to="product">All Products</nuxt-link>
-          </button>
+            <slot />
+          </div>
         </div>
       </div>
     </div>

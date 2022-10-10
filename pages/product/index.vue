@@ -39,12 +39,6 @@
           </div>
         </div>
       </div>
-      <!-- <div
-        v-else
-        class="bg-bgPri text-SecondaryVariant font-Roboto h-20 border-SecondaryVariant border-[1px] flex justify-center items-center text-xl border-b-0 px-3 py-7"
-      >
-        Find anything...
-      </div> -->
       <div
         class="font-Great text-Primary text-right sticky bottom-0 bg-bgPri rounded-b-md border-SecondaryVariant border-t px-3 py-2"
       >
@@ -72,7 +66,7 @@
         </h1>
         <h1
           v-else
-          v-for="(data, index) in filteredData.slice(0,1)"
+          v-for="(data, index) in filteredData.slice(0, 1)"
           :key="index"
           class="font-Playfair md:text-5xl text-4xl"
         >
@@ -164,7 +158,8 @@
               v-for="(data, id) in filteredData"
               :key="id"
             >
-              <button @click="gotoProductId(data.id)"
+              <button
+                @click="gotoProductId(data.id)"
                 @mouseover="hoverImg = id"
                 @mouseleave="hoverImg = null"
                 class="w-full h-full flex overflow-hidden relative rounded-sm"
@@ -172,7 +167,7 @@
                 <img
                   :class="hoverImg === id ? 'blur-sm' : 'blur-none'"
                   class="w-full h-full object-cover duration-300"
-                  :src="data.img"
+                  :src="data.img[0]"
                   alt=""
                 />
                 <transition
@@ -249,12 +244,6 @@ export default {
         return this.data.filter((d) => d.title === this.selectedCategory)
       }
       return this.data
-      // return (
-      //   this.data,
-      //   this.data.filter((data) => {
-      //     return data.name.toLowerCase().match(this.search.toLowerCase())
-      //   })
-      // )
     },
     filteredSearch() {
       return this.data.filter((data) => {
@@ -264,19 +253,7 @@ export default {
   },
   mounted() {
     console.log(this.data)
-    // this.menuBar()
   },
-  // methods: {
-  //   menuBar() {
-  //     this.data.id.filter(data)
-  //     return this.data >= 7
-  //   },
-  // },
-  //   asynData({ $axios }) {
-  //     return $axios.get('data.json').then((response) => {
-  //       console.log(response)
-  //     })
-  //   },
 }
 </script>
 

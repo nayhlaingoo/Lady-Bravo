@@ -3,7 +3,11 @@
     <Hero />
     <Category />
     <Counter :seconds="60" :minutes="60" :hours="24" :days="30" />
-    <BestSeller title="Best Seller" />
+    <BestSeller title="Best Seller">
+      <nuxt-link to="Product">
+        <ButtonAccent label="All Product" />
+      </nuxt-link>
+    </BestSeller>
     <VdayDiscount />
     <Newsletter />
     <PaymentLogo />
@@ -14,6 +18,7 @@
 </template>
 
 <script>
+import Carousel from '~/components/Carousel.vue'
 export default {
   name: 'IndexPageVue',
   head() {
@@ -21,6 +26,6 @@ export default {
       title: 'Lady Bravo',
     }
   },
-  components: {},
+  components: {Carousel},
 }
 </script>

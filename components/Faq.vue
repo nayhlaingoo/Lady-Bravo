@@ -265,9 +265,9 @@ export default {
 
 .openAni {
   animation-fill-mode: forwards;
-  animation-duration: 0.8s;
+  animation-duration: 0.5s;
   animation-name: openAnimateHeight;
-  transition: height 0.8s;
+  transition: height 0.5s;
 }
 
 @keyframes closeAnimateHeight {
@@ -281,8 +281,8 @@ export default {
 
 .closeAni {
   animation-fill-mode: forwards;
-  animation-duration: 0.7s;
+  animation-duration: 0.5s;
   animation-name: closeAnimateHeight;
-  transition: height 0.7s;
+  transition: height 0.5s;
 }
 </style>

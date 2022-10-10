@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <div
       class="bg-bgPri relative border-Secondary/5 border-t text-Secondary text-left md:py-16 py-10 md:pl-10 pl-5"
     >
@@ -33,59 +33,10 @@
     </div>
 
     <div v-if="currentProduct" class="mt-10 mb-16">
-      <div class="px-10 py-5 flex justify-center items-center gap-20">
-        <div class="flex gap-5">
-          <div class="">
-            <div class="w-24 h-20">
-              <img
-                @click="sampleImg1 = true"
-                class="w-full h-full object-cover rounded-sm"
-                src="https://www.slazzer.com/static/images/home-page/banner-orignal-image.jpg"
-                alt=""
-              />
-              <img
-                @click="sampleImg2 = true"
-                class="w-full h-full object-cover rounded-sm my-5"
-                src="https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg"
-                alt=""
-              />
-              <img
-                @click="sampleImg3 = true"
-                class="w-full h-full object-cover rounded-sm"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
-                alt=""
-              />
-            </div>
-          </div>
-          <div
-          class="w-[35rem] h-[70vh]">
-            <img
-              class="w-full h-full object-cover rounded-sm"
-              :src="currentProduct.img"
-              alt=""
-            />
-            <!-- <img
-                v-bind="currentImg"
-                class="w-full h-full object-cover rounded-sm"
-                src="https://www.slazzer.com/static/images/home-page/banner-orignal-image.jpg"
-                alt=""
-              />
-              <img
-                v-bind="currentImg"
-                class="w-full h-full object-cover rounded-sm my-5"
-                src="https://d5nunyagcicgy.cloudfront.net/external_assets/hero_examples/hair_beach_v391182663/original.jpeg"
-                alt=""
-              />
-              <img
-                v-bind="currentImg"
-                class="w-full h-full object-cover rounded-sm"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
-                alt=""
-              /> -->
-          </div>
-        </div>
+      <div class="px-10 py-5 md:flex justify-center items-center gap-20">
+        <Carousel :images="currentProduct.img" />
 
-        <div class="font-Roboto text-Secondary w-[35%]">
+        <div class="font-Roboto text-Secondary md:w-[35%] w-full mt-7 md:mt-0">
           <h1 class="text-3xl font-Playfair mb-5">
             {{ currentProduct.category }}
           </h1>
@@ -106,85 +57,92 @@
             />
           </div>
           <div class="flex flex-col gap-3 mt-3">
-            <ButtonAccent class="w-60 rounded-sm" label="Add To Cart" />
-            <ButtonPrimary class="w-60" label="Buy Now" />
+            <ButtonAccent
+              class="sm:w-60 w-full rounded-sm"
+              label="Add To Cart"
+            />
+            <ButtonPrimary class="sm:w-60 w-full" label="Buy Now" />
           </div>
 
-          <div
-            :class="
-              description
-                ? 'openAni overflow-auto scrollbar-hide'
-                : 'closeAni overflow-hidden'
-            "
-            @click="description = !description"
-            class="border-SecondaryVariant border-b w-96 cursor-pointer mt-7"
-          >
+          <div class="accordion" id="accordionExample">
             <div
-              class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:text-Secondary/70 duration-300"
+              class="accordion-item bg-white font-Roboto w-full sm:w-96 mt-7"
             >
-              <div class="w-full">
-                <div class="flex justify-between items-center">
-                  <h1 class="text-sm xs:text-base">Description</h1>
-                  <div>
-                    <div
-                      :class="description ? 'mb-0 rotate-45' : 'mb-2'"
-                      class="text-2xl text-Secondary/70 duration-300"
-                    >
-                      +
-                    </div>
-                  </div>
+              <h2
+                class="accordion-header border-b border-SecondaryVariant/50 bg-white mb-0 duration-150 hover:text-Secondary/70"
+                id="headingOne"
+              >
+                <button
+                  class="relative flex justify-between items-center w-full pb-3 text-left text-sm xs:text-base"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  Description
+                  <span class="text-Secondary/50">+</span>
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse duration-500"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div
+                  class="accordion-body py-3 border-b border-SecondaryVariant/50 text-sm text-Secondary/70"
+                >
+                  {{ currentProduct.description }}
                 </div>
               </div>
             </div>
-            <transition
-              enter-active-class="animate__animated animate__fadeIn"
-              leave-active-class="animate__animated animate__fadeOut"
-            >
-              <p
-                v-if="description"
-                class="text-sm font-Roboto text-Secondary/70 my-2"
-              >
-                {{ currentProduct.description }}
-              </p>
-            </transition>
-          </div>
-          <div
-            :class="
-              productDetail
-                ? 'openAni overflow-auto scrollbar-hide'
-                : 'closeAni overflow-hidden'
-            "
-            @click="productDetail = !productDetail"
-            class="border-SecondaryVariant border-b w-96 cursor-pointer"
-          >
             <div
-              class="flex justify-center items-center sticky -top-1 py-3 bg-white hover:text-Secondary/70 duration-300"
+              class="accordion-item bg-white font-Roboto w-full sm:w-96 mt-5"
             >
-              <div class="w-full">
-                <div class="flex justify-between items-center">
-                  <h1 class="text-sm xs:text-base">Product Detail</h1>
-                  <div>
-                    <div
-                      :class="productDetail ? 'mb-0 rotate-45' : 'mb-2'"
-                      class="text-2xl text-Secondary/70 duration-300"
-                    >
-                      +
-                    </div>
-                  </div>
+              <h2
+                class="accordion-header border-b border-SecondaryVariant/50 bg-white mb-0 duration-150 hover:text-Secondary/70"
+                id="headingTwo"
+              >
+                <button
+                  class="relative flex justify-between items-center w-full pb-3 text-left text-sm xs:text-base"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Product Detail
+                  <span class="text-Secondary/50">+</span>
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse duration-700"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body py-3 text-sm text-Secondary/70">
+                  <p class="flex justify-between border-bgPri border-b py-3">
+                    Country: <span>{{ currentProduct.detail.country }}</span>
+                  </p>
+                  <p class="flex justify-between border-bgPri border-b py-3">
+                    Weight: <span>{{ currentProduct.detail.weight }}g</span>
+                  </p>
+                  <p class="flex justify-between border-bgPri border-b py-3">
+                    Height: <span>{{ currentProduct.detail.height }}cm</span>
+                  </p>
+                  <p class="flex justify-between border-bgPri border-b py-3">
+                    Length: <span>{{ currentProduct.detail.length }}cm</span>
+                  </p>
+                  <p
+                    class="flex justify-between border-SecondaryVariant/50 border-b py-3"
+                  >
+                    Width: <span>{{ currentProduct.detail.width }}cm</span>
+                  </p>
                 </div>
               </div>
             </div>
-            <transition
-              enter-active-class="animate__animated animate__fadeIn"
-              leave-active-class="animate__animated animate__fadeOut"
-            >
-              <p
-                v-if="productDetail"
-                class="text-sm font-Roboto text-Secondary/70 my-2"
-              >
-                {{ currentProduct.detail }}
-              </p>
-            </transition>
           </div>
         </div>
       </div>
@@ -193,7 +151,11 @@
       <h1 class="text-8xl mb-2 text-slate-700">404 error</h1>
       <p class="text-xl text-Secondary">This page doesn't exist :(</p>
     </div>
-    <BestSeller title="There's More To See" />
+    <BestSeller title="There's More To See">
+      <nuxt-link to="./">
+        <ButtonAccent label="All Product" />
+      </nuxt-link>
+    </BestSeller>
     <Footer />
   </div>
 </template>
@@ -206,8 +168,8 @@ export default {
   data() {
     return {
       data,
-      description: false,
-      productDetail: false,
+      showDescription: false,
+      showProductDetail: false,
     }
   },
   computed: {
@@ -225,33 +187,33 @@ export default {
 <style scoped>
 @keyframes openAnimateHeight {
   from {
-    height: 3.7rem;
+    max-height: 10vh;
   }
   to {
-    height: 8rem;
+    max-height: 30vh;
   }
 }
 
 .openAni {
   animation-fill-mode: forwards;
-  animation-duration: 0.8s;
+  animation-duration: 0.5s;
   animation-name: openAnimateHeight;
-  transition: height 0.8s;
+  transition: height 0.5s;
 }
 
 @keyframes closeAnimateHeight {
   from {
-    height: 8rem;
+    max-height: 30vh;
   }
   to {
-    height: 3.7rem;
+    max-height: 10vh;
   }
 }
 
 .closeAni {
   animation-fill-mode: forwards;
-  animation-duration: 0.7s;
+  animation-duration: 0.5s;
   animation-name: closeAnimateHeight;
-  transition: height 0.7s;
+  transition: height 0.5s;
 }
 </style>
