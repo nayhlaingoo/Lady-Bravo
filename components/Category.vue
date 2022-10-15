@@ -14,7 +14,7 @@
               @mouseover="imgBtnHover1 = true"
               @mouseleave="imgBtnHover1 = false"
               class="w-full h-full object-cover cursor-pointer"
-              src="~/static/category1.jpg"
+              src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
               alt=""
             />
             <button
@@ -61,7 +61,7 @@
               @mouseover="imgBtnHover2 = true"
               @mouseleave="imgBtnHover2 = false"
               class="w-full h-full object-cover cursor-pointer"
-              src="~/static/category2.jpg"
+              src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
               alt=""
             />
             <button
@@ -79,7 +79,7 @@
                 @mouseover="imgBtnHover3 = true"
                 @mouseleave="imgBtnHover3 = false"
                 class="w-full h-full object-cover cursor-pointer"
-                src="~/static/category3.jpg"
+                src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
                 alt=""
               />
               <button
@@ -95,7 +95,7 @@
                 @mouseover="imgBtnHover4 = true"
                 @mouseleave="imgBtnHover4 = false"
                 class="w-full h-full object-cover cursor-pointer"
-                src="~/static/category4.jpg"
+                src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
                 alt=""
               />
               <button
@@ -121,7 +121,7 @@
                 @mouseover="imgBtnHover1 = true"
                 @mouseleave="imgBtnHover1 = false"
                 class="w-full h-full object-cover cursor-pointer"
-                src="~/static/category1.jpg"
+                src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
                 alt=""
               />
               <button
@@ -139,7 +139,7 @@
               @mouseover="imgBtnHover2 = true"
               @mouseleave="imgBtnHover2 = false"
               class="w-full h-full object-cover cursor-pointer"
-              src="~/static/category2.jpg"
+              src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
               alt=""
             />
             <button
@@ -156,7 +156,7 @@
               @mouseover="imgBtnHover3 = true"
               @mouseleave="imgBtnHover3 = false"
               class="w-full h-full object-cover cursor-pointer"
-              src="~/static/category3.jpg"
+              src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
               alt=""
             />
             <button
@@ -173,7 +173,7 @@
               @mouseover="imgBtnHover4 = true"
               @mouseleave="imgBtnHover4 = false"
               class="w-full h-full object-cover cursor-pointer"
-              src="~/static/category4.jpg"
+              src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
               alt=""
             />
             <button

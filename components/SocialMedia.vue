@@ -17,7 +17,7 @@
       >
         <img
           class="w-full h-full object-cover rounded-sm cursor-pointer duration-200"
-          src="~/static/linkImg1.jpg"
+          src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
           alt="Image"
           :class="cursor1 ? 'brightness-50' : ''"
         />
@@ -53,7 +53,7 @@
       >
         <img
           class="w-full h-full object-cover rounded-sm cursor-pointer duration-200"
-          src="~/static/linkImg2.jpg"
+          src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
           alt="Image"
           :class="cursor2 ? 'brightness-50' : ''"
         />
@@ -89,7 +89,7 @@
       >
         <img
           class="w-full h-full object-cover rounded-sm cursor-pointer duration-200"
-          src="~/static/linkImg3.jpg"
+          src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
           alt="Image"
           :class="cursor3 ? 'brightness-50' : ''"
         />

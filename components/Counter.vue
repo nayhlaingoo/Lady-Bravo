@@ -1,7 +1,7 @@
 <template>
   <div v-if="loaded" class="relative xl:max-w-[2000px] mx-auto">
     <div
-      class="mb-7 flex flex-col justify-center items-center bg-[url('@/static/hellotest.jpg')] bg-cover bg-center bg-no-repeat w-full sm:h-96 h-screen contrast-100 brightness-50 opacity-90 mx-auto"
+      class="mb-7 flex flex-col justify-center items-center bg-[url('@/static/chocohero.jpg')] bg-cover bg-center bg-no-repeat w-full sm:h-96 h-screen contrast-100 brightness-50 opacity-90 mx-auto"
     ></div>
     <div
       class="text-SecondaryVariant absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-center w-full"
