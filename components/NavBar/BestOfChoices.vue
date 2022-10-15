@@ -66,7 +66,7 @@
           </li>
         </ul>
 
-        <div class="w-32 h-20 hidden md:block">
+        <!-- <div class="w-32 h-20 hidden md:block">
           <img
             v-if="rocherImg"
             class="w-full h-full object-cover shadow-sm rounded-sm"
@@ -103,7 +103,7 @@
             src="~/static/lindtimg.jpg"
             alt=""
           />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

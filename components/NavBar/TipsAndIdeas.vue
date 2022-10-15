@@ -95,7 +95,7 @@
             </li>
           </ul>
         </div>
-        <div v-if="vDayImg" class="w-32 h-20">
+        <!-- <div v-if="vDayImg" class="w-32 h-20">
           <img
             class="hidden md:block w-full h-full object-cover shadow-sm rounded-sm"
             src="@/static/vdaychoco.jpg"
@@ -115,7 +115,7 @@
             src="@/static/christmas.jpg"
             alt="Image"
           />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
