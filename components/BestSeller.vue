@@ -43,7 +43,7 @@
               {{ data.name }}
             </div>
             <div class="text-Secondary/80 font-Roboto text-center">
-              {{ data.price }}
+              {{ data.price }}Ks
             </div>
           </div>
         </div>

@@ -14,20 +14,7 @@
         class="absolute -bottom-2.5 xs:right-0 xs:mr-7 flex items-center flex-nowrap gap-x-1 w-fit text-[8px] xs:text-[10px] font-Roboto bg-white text-Secondary border-SecondaryVariant border rounded-full px-3 py-1"
       >
         <nuxt-link class="hover:text-Primary" to="./">Product</nuxt-link>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="xs:h-3 xs:w-3 h-2 w-2"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
+        <outline-chevron-right-icon class="xs:h-3 xs:w-3 h-2 w-2" />
         <p class="text-Secondary/70">Product detail</p>
       </div>
     </div>
@@ -43,26 +30,76 @@
           <p class="mb-3">{{ currentProduct.caption }}</p>
           <p class="text-xl">SKU: 0007</p>
           <p class="my-3">
-            {{ currentProduct.price }}
+            {{ currentProduct.price }}Ks
             <span class="line-through text-Primary ml-3">4500ks</span>
           </p>
-          <div>
-            <label for="qty" class="block mb-2 text-sm">Quantity</label>
-            <input
-              type="number"
-              min="1"
-              placeholder="1"
-              required
-              class="bg-gray-50 w-20 border border-SecondaryVariant/50 text-gray-900 text-sm rounded-sm px-2 py-1.5 outline-none focus:border-SecondaryVariant"
-            />
-          </div>
           <div class="flex flex-col gap-3 mt-3">
-            <ButtonAccent
-              class="sm:w-60 w-full rounded-sm"
-              label="Add To Cart"
+            <InputField
+              @click="addToCart(currentProduct)"
+              v-model="currentProduct.qty"
+              placeHolder="Quantity"
+              type="number"
+              class="sm:w-60"
+            >
+              <ButtonAccent
+                type="submit"
+                class="w-full rounded-sm"
+                label="Add To Cart"
+              />
+            </InputField>
+
+            <ButtonPrimary
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              class="sm:w-60 w-full duration-150"
+              label="Buy Now"
             />
-            <ButtonPrimary class="sm:w-60 w-full" label="Buy Now" />
           </div>
+          <!-- temporaryModel -->
+          <div
+            class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog relative w-auto pointer-events-none">
+              <div
+                class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current"
+              >
+                <div
+                  class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md"
+                >
+                  <h5
+                    class="text-xl font-medium leading-normal text-gray-800"
+                    id="exampleModalLabel"
+                  >
+                    In Progress!
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body relative p-4">
+                  We're currently working on it. Will be able to order in very
+                  near future.
+                </div>
+                <div
+                  class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md"
+                >
+                  <ButtonAccent
+                    label="Close"
+                    data-bs-dismiss="modal"
+                    class="duration-150 ease-in-out"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
 
           <div class="accordion" id="accordionExample">
             <div
@@ -162,15 +199,29 @@
 
 <script>
 import data from '/store/data.json'
+import InputField from '~/components/Form/InputField.vue'
 export default {
   name: 'ProductId',
-  components: {},
+  components: { InputField },
   data() {
     return {
       data,
-      showDescription: false,
-      showProductDetail: false,
+      errMesage: 'Quantity is required.',
+      error: false,
     }
+  },
+  methods: {
+    addToCart(currentProduct) {
+      if (!currentProduct.qty) {
+        this.error = true
+        this.error = this.errMesage
+        setTimeout(() => {
+          this.error = false
+        }, 3000)
+      } else {
+        $nuxt.$emit('add-to-cart', currentProduct)
+      }
+    },
   },
   computed: {
     currentProduct() {

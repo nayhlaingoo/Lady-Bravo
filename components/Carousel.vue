@@ -41,7 +41,7 @@
       </div>
     </div>
     <button
-      class="carousel-control-prev bg-Secondary/50 w-9 sm:w-16 h-9 sm:h-16 rounded-full absolute top-1/2 -translate-y-1/2 left-0 flex items-center justify-center sm:p-0 p-2 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline"
+      class="carousel-control-prev bg-Secondary/70 w-9 sm:w-16 h-9 sm:h-16 rounded-full absolute top-1/2 -translate-y-1/2 left-0 flex items-center justify-center sm:p-0 p-2 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline"
       type="button"
       data-bs-target="#carouselExampleCaptions"
       data-bs-slide="prev"
@@ -53,7 +53,7 @@
       <span class="visually-hidden">Previous</span>
     </button>
     <button
-      class="carousel-control-next bg-Secondary/50 w-9 sm:w-16 h-9 sm:h-16 rounded-full absolute top-1/2 -translate-y-1/2 right-0 flex items-center justify-center sm:p-0 p-2 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline"
+      class="carousel-control-next bg-Secondary/70 w-9 sm:w-16 h-9 sm:h-16 rounded-full absolute top-1/2 -translate-y-1/2 right-0 flex items-center justify-center sm:p-0 p-2 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline"
       type="button"
       data-bs-target="#carouselExampleCaptions"
       data-bs-slide="next"

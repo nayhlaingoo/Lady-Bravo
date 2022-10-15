@@ -1,15 +1,14 @@
 <template>
   <div class="w-full h-full">
+    <!-- searchbox -->
     <div
       v-if="searchBar"
       class="sm:w-[35rem] w-full px-2 absolute top-10 left-1/2 -translate-x-1/2 z-50"
     >
-      <input
-        class="bg-bgPri rounded-t-md w-full px-3 py-2 outline-none border-[1px] border-SecondaryVariant"
-        type="text"
-        placeholder="Search by name"
+      <SearchBar
         v-model="search"
-        :class="search ? 'rounded-b-none' : ''"
+        placeHolder="Search by name..."
+        class="w-full"
       />
       <div
         v-if="search"
@@ -33,24 +32,25 @@
           <div class="w-10 h-7">
             <img
               class="w-full h-full object-cover rounded"
-              :src="data.img"
+              :src="data.img[0]"
               alt=""
             />
           </div>
         </div>
       </div>
       <div
-        class="font-Great text-Primary text-right sticky bottom-0 bg-bgPri rounded-b-md border-SecondaryVariant border-t px-3 py-2"
+        class="shadow-md font-Great text-Primary text-right sticky bottom-0 bg-bgPri rounded-b-md border-SecondaryVariant border-t px-3 py-2"
       >
         Lady Bravo
       </div>
     </div>
+    <!-- end -->
     <!-- Header -->
     <div :class="searchBar ? 'fixed' : ''">
       <button
         v-if="searchBar"
         @click="searchBar = false"
-        class="fixed inset-0 w-full h-full cursor-default bg-black/50 backdrop-blur-md z-10"
+        class="fixed inset-0 w-full h-full cursor-default bg-black/20 backdrop-blur-md z-10"
       ></button>
       <div
         class="bg-bgPri relative border-Secondary/5 border-t text-Secondary text-left md:py-24 py-16 md:pl-10 pl-5"
@@ -77,20 +77,7 @@
           @click="searchBar = !searchBar"
           class="hover:shadow absolute -bottom-2.5 xs:right-0 xs:mr-7 flex items-center flex-nowrap gap-x-1 w-fit text-[8px] xs:text-xs font-Roboto bg-white text-Secondary border-SecondaryVariant border rounded-full px-3 py-1"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="xs:h-2.5 xs:w-2.5 h-2 w-2"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-            />
-          </svg>
+          <outline-search-icon class="xs:h-3 xs:w-3 h-2 w-2" />
           <p>Search by name</p>
         </button>
       </div>
@@ -186,7 +173,7 @@
                 {{ data.name }}
               </div>
               <div class="text-Secondary/80 font-Roboto text-center">
-                {{ data.price }}
+                {{ data.price }}Ks
               </div>
             </div>
           </div>
@@ -207,6 +194,7 @@
 
 <script>
 import data from '/store/data.json'
+import SearchBar from '~/components/Form/SearchBar.vue'
 import Faq from '~/components/Faq.vue'
 import Footer from '~/components/Footer.vue'
 import SocialMedia from '~/components/SocialMedia.vue'
@@ -214,6 +202,7 @@ export default {
   name: 'productvue',
   layout: 'product',
   components: {
+    SearchBar,
     Faq,
     SocialMedia,
     Footer,
