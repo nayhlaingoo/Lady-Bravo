@@ -14,7 +14,6 @@
     "autoprefixer": "^10.4.4",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24",
-    "@nuxt-hero-icons/outline": "^1.0.1",
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/axios": "^5.13.6",
     "animate.css": "^4.1.1",

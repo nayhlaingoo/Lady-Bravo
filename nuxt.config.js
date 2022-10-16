@@ -23,13 +23,13 @@ export default {
   css: ['@css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/node_modules/tw-elements', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxt/postcss8', '@nuxt-hero-icons/outline/nuxt',],
+  buildModules: ['@nuxt/postcss8'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
