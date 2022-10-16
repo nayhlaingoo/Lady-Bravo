@@ -5,7 +5,6 @@ module.exports = {
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
-    './node_modules/tw-elements/dist/js/**/*.js',
   ],
   theme: {
     screens: {
@@ -42,6 +41,5 @@ module.exports = {
   },
   plugins: [
     require('tailwind-scrollbar-hide'),
-    require('tw-elements/dist/plugin'),
   ],
 }

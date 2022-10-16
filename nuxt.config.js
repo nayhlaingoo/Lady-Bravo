@@ -23,9 +23,7 @@ export default {
   css: ['@css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    {src: '~/node_modules/tw-elements', mode: 'client'}
-  ],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
