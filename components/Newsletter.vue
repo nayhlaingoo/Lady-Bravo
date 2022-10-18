@@ -15,13 +15,14 @@
         </p>
       </div>
       <div class="flex flex-col items-center">
-        <div class="xs:flex items-center justify-center gap-3 w-full my-4">
-          <input
-            class="w-full p-2 border-SecondaryVariant border focus:border-Secondary/70 rounded-md outline-none"
+        <div class="w-full my-4">
+          <InputField
+            placeHolder="@example.com"
             type="text"
-            placeholder="email@example.com"
-          />
-          <ButtonSecondary label="Subscribe" />
+            class="w-full xs:flex items-center justify-center gap-3"
+          >
+            <ButtonSecondary type="submit" label="Subscribe" />
+          </InputField>
         </div>
         <p class="text-[10px] text-Secondary/70 text-center">
           We care about the protection of your data. Read our
@@ -35,8 +36,12 @@
 </template>
 
 <script>
+import InputField from '~/components/Form/InputField.vue'
 export default {
   name: 'NewsLetterVue',
+  components: {
+    InputField,
+  },
   data() {
     return {}
   },

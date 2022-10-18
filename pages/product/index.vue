@@ -77,7 +77,21 @@
           @click="searchBar = !searchBar"
           class="hover:shadow absolute -bottom-2.5 xs:right-0 xs:mr-7 flex items-center flex-nowrap gap-x-1 w-fit text-[8px] xs:text-xs font-Roboto bg-white text-Secondary border-SecondaryVariant border rounded-full px-3 py-1"
         >
-          <outline-search-icon class="xs:h-3 xs:w-3 h-2 w-2" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="xs:h-3 xs:w-3 h-2 w-2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+
           <p>Search by name</p>
         </button>
       </div>
@@ -132,7 +146,7 @@
             Mars
           </button>
           <button
-            @click="selectedCategory = 'Gift'"
+            @click="selectedCategory = 'Present'"
             class="hover:text-Primary w-fit"
           >
             For Gift
@@ -236,7 +250,7 @@ export default {
     },
     filteredSearch() {
       return this.data.filter((data) => {
-        return data.name.toLowerCase().match(this.search.toLowerCase())
+        return data.category.toLowerCase().match(this.search.toLowerCase())
       })
     },
   },

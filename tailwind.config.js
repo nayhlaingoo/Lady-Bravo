@@ -38,7 +38,11 @@ module.exports = {
         'Pos-0': '0% 0%',
         'Pos-100': '100% 100%',
       },
-    },
+      backgroundImage: {
+        'hero-img': "url('https://drive.google.com/uc?export=view&id=12dq6ieRjtoC4bXGduNqlcAtf1OczyLvF')",
+        'counter-img': "url('https://drive.google.com/uc?export=view&id=17JYEAI_j8-OauC397CpKNYb-IMn68oVl')"
+      }
+    }, 
   },
   plugins: [
     require('tailwind-scrollbar-hide'),

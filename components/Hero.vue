@@ -1,7 +1,7 @@
 <template>
   <div class="border-black/5 border-b pb-7">
     <div
-      class="px-5 flex items-center w-full h-screen bg-[url('@/static/chocohero.jpg')] bg-fixed bg-no-repeat bg-cover"
+      class="px-5 flex items-center w-full h-screen bg-hero-img bg-fixed bg-no-repeat bg-cover"
     >
       <div class="flex flex-col justify-center items-start md:px-5 py-5">
         <h1 class="font-Playfair text-7xl text-Primary mb-5">Lady Bravo</h1>

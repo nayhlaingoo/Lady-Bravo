@@ -43,7 +43,7 @@
             >
               <ButtonAccent
                 type="submit"
-                class="w-full rounded-sm"
+                class="w-full rounded-sm mt-3"
                 label="Add To Cart"
               />
             </InputField>

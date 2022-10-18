@@ -17,15 +17,14 @@
       >
         <img
           class="w-full h-full object-cover rounded-sm cursor-pointer duration-200"
-          src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
+          src="https://drive.google.com/uc?export=view&id=1-XIrCmQq4eSZaryatgbC16lmQEm9Fn93"
           alt="Image"
           :class="cursor1 ? 'brightness-50' : ''"
-        />
+        /> 
         <div
           v-if="cursor1"
           class="w-full px-1 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] cursor-pointer duration-200 text-center"
         >
-        <!-- bg-gradient-to-tl to-violet-600 via-orange-400 from-rose-600 -->
           <svg
             class="w-8 h-8 rounded-full p-1.5 mx-auto bg-SecondaryVariant"
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +52,7 @@
       >
         <img
           class="w-full h-full object-cover rounded-sm cursor-pointer duration-200"
-          src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
+          src="https://drive.google.com/uc?export=view&id=1qjPMZjweGS_WA03h6_NWMsXGF5Kahk3w"
           alt="Image"
           :class="cursor2 ? 'brightness-50' : ''"
         />
@@ -61,7 +60,6 @@
           v-if="cursor2"
           class="w-full px-1 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] cursor-pointer duration-200 text-center"
         >
-        <!-- bg-gradient-to-b to-blue-700 from-blue-400 -->
           <svg
             class="w-8 h-8 rounded-full p-1.5 mx-auto bg-SecondaryVariant"
             xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +87,7 @@
       >
         <img
           class="w-full h-full object-cover rounded-sm cursor-pointer duration-200"
-          src="https://c1.wallpaperflare.com/preview/665/133/316/candy-bar-sweetness-chocolate-mars.jpg"
+          src="https://drive.google.com/uc?export=view&id=1o-fHAw54xXb0r0FKFe38Ne9r8xlhGNIJ"
           alt="Image"
           :class="cursor3 ? 'brightness-50' : ''"
         />
