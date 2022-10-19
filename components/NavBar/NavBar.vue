@@ -12,9 +12,9 @@
             <li class="cursor-pointer px-4 hover:text-PrimaryVariant/80 duration-150">
               <nuxt-link to="/"> Home </nuxt-link>
             </li>
-            <li class="cursor-pointer px-4 hover:text-PrimaryVariant/80 duration-150">
+            <!-- <li class="cursor-pointer px-4 hover:text-PrimaryVariant/80 duration-150">
               <nuxt-link to="product"> Shop </nuxt-link>
-            </li>
+            </li> -->
             <div
               @mouseover="openBestOfChoices = true"
               @mouseleave="openBestOfChoices = false"
@@ -125,12 +125,12 @@
           >
             <nuxt-link to="/"> Home </nuxt-link>
           </li>
-          <li
+          <!-- <li
             @click="open = false"
             class="cursor-pointer animate__animated animate__fadeIn delay-2 hover:text-PrimaryVariant/80 duration-150"
           >
             <nuxt-link to="product"> Shop </nuxt-link>
-          </li>
+          </li> -->
           <div @click="openBestOfChoices = !openBestOfChoices">
             <li
               class="cursor-pointer animate__animated animate__fadeIn delay-3 hover:text-PrimaryVariant/80 duration-150"

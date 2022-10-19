@@ -37,7 +37,7 @@
     </div>
 
     <div
-      class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-bgPri invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 right-0 border-none w-96"
+      class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-white invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 top-0 right-0 border-none w-96"
       tabindex="-1"
       id="offcanvasRight"
       aria-labelledby="offcanvasRightLabel"
@@ -53,7 +53,7 @@
         </h5>
         <button
           type="button"
-          class="btn-close box-content bg-SecondaryVariant hover:rotate-180 duration-300 rounded-full w-4 h-4 p-2 text-xs -my-5 -mr-2 opacity-60"
+          class="btn-close box-content bg-bgPri hover:rotate-180 duration-300 rounded-full w-4 h-4 p-2 text-xs -my-5 -mr-2"
           data-bs-dismiss="offcanvas"
           aria-label="Close"
         ></button>
@@ -62,15 +62,14 @@
         <div v-if="products.length" class="overflow-x-hidden pb-16 mx-1">
           <div v-for="(product, index) in products" :key="index" class="w-full">
             <div
+              @click="selectProduct(product)"
               class="w-full flex gap-3 my-3 p-1 hover:bg-SecondaryVariant/30 duration-100 cursor-pointer"
             >
-              <div class="w-16">
-                <img
-                  class="w-full h-full object-cover"
-                  :src="product.img[0]"
-                  alt=""
-                />
-              </div>
+              <img
+                class="w-20 h-auto object-cover"
+                :src="product.img[0]"
+                alt=""
+              />
               <div
                 class="text-sm font-Roboto text-Secondary flex flex-col gap-y-1"
               >
@@ -99,16 +98,92 @@
           </h1>
         </div>
       </div>
+      <Modal
+        v-model="modalOpen"
+        customClass="max-w-[700px] mx-3"
+        title="Product Info"
+      >
+        <div v-if="product">
+          <div>
+            <div class="border-bgPri border-b py-2 flex">
+              <p class="w-24">name:</p>
+              {{ product.category }}
+            </div>
+            <div class="border-bgPri border-b py-2 flex">
+              <p class="w-24">about:</p>
+              <span class="sm:w-96 w-[70%]">
+
+              {{ product.caption }}
+              </span>
+            </div>
+            <div class="border-bgPri border-b py-2 flex">
+              <p class="w-24">country:</p>
+              {{ product.detail.country }}
+            </div>
+            <div class="border-bgPri border-b py-2 flex">
+              <p class="w-24">weight:</p>
+              {{ product.detail.weight }}cm
+            </div>
+            <div class="border-bgPri border-b py-2 flex">
+              <p class="w-24">height:</p>
+              {{ product.detail.height }}cm
+            </div>
+            <div class="border-bgPri border-b py-2 flex">
+              <p class="w-24">width:</p>
+              {{ product.detail.width }}cm
+            </div>
+            <div class="border-bgPri border-b py-2 flex">
+              <p class="w-24">lenght:</p>
+              {{ product.detail.length }}cm
+            </div>
+            <div
+              class="flex justify-between items-center border-bgPri border-b py-2"
+            >
+              <div class="flex">
+                <p class="w-24">total:</p>
+                {{ product.qty }}
+              </div>
+              <div class="flex gap-3">
+                <button
+                  @click="decreaseQty(product)"
+                  class="bg-red-200 select-none border-red-400 border-[1px] text-red-600 rounded-full w-5 h-5 flex items-center justify-center"
+                >
+                  -
+                </button>
+                <button
+                  @click="increaseQty(product)"
+                  class="bg-green-200 select-none border-green-400 border-[1px] text-green-600 rounded-full w-5 h-5 flex items-center justify-center"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <div class="border-bgPri border-b py-2 flex">
+              <p class="w-24">price:</p>
+              {{ product.price * product.qty }}ks
+            </div>
+          </div>
+        </div>
+        <template #footer>
+          <ButtonAccent @click="modalOpen = false" label="Submit" class="rounded-md mt-16" />
+        </template>
+      </Modal>
     </div>
   </div>
 </template>
 
 <script>
+import Modal from './Modal.vue'
 export default {
   name: 'CartVue',
+  components: {
+    Modal,
+  },
   data() {
     return {
+      product: null,
       products: [],
+      modalOpen: false,
     }
   },
   computed: {
@@ -118,15 +193,35 @@ export default {
   },
   created() {
     this.$nuxt.$on('add-to-cart', (item) => {
-      console.log('add', item)
       let alreadyExist = this.products.find((product) => product.id === item.id)
       if (alreadyExist) {
         alreadyExist.qty = item.qty
       } else {
         this.products.push({ ...item })
       }
+      console.log('added into cart', item)
       // if (!alreadyExist) this.products.push(item)
     })
+  },
+  methods: {
+    increaseQty(item) {
+      let increaseQty = this.products.find((product) => product.id === item.id)
+      increaseQty.qty++
+      console.log('increase Qty', item)
+    },
+    decreaseQty(item) {
+      let decreaseQty = this.products.find((product) => product.id === item.id)
+      let index = this.products.findIndex((product) => product.id === item.id)
+      decreaseQty.qty--
+      if (decreaseQty.qty === 0) {
+        this.products.splice(index, 1)
+      }
+      console.log('decrease Qty', item)
+    },
+    selectProduct(item) {
+      this.product = item
+      this.modalOpen = true
+    },
   },
 }
 </script>
