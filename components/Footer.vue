@@ -18,30 +18,30 @@
           >
             <h1 class="text-Secondary font-Playfair text-lg mb-3">Shop</h1>
             <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
-              >Choco Brand</nuxt-link
+              >Shop by Catalog</nuxt-link
             >
             <nuxt-link class="hover:text-Secondary/50 duration-100 my-3" to=""
-              >Worldwide choco</nuxt-link
+              >Present</nuxt-link
             >
             <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
-              >For Gift</nuxt-link
+              >Ferrero Rocher</nuxt-link
             >
             <nuxt-link class="hover:text-Secondary/50 duration-100 mt-3" to=""
-              >For V-Day</nuxt-link
+              >Cadbury</nuxt-link
             >
           </div>
           <div
             class="text-Secondary/70 font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-auto"
           >
             <h1 class="text-Secondary font-Playfair text-lg mb-3">Page</h1>
-            <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
+            <nuxt-link class="hover:text-Secondary/50 duration-100" to="/"
               >Home</nuxt-link
             >
-            <nuxt-link class="hover:text-Secondary/50 duration-100 my-3" to=""
-              >About Us</nuxt-link
+            <nuxt-link class="hover:text-Secondary/50 duration-100 my-3" to="/product"
+              >Our Categories</nuxt-link
             >
-            <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
-              >FAQ</nuxt-link
+            <nuxt-link class="hover:text-Secondary/50 duration-100" to="/about"
+              >About us</nuxt-link
             >
           </div>
           <div
@@ -51,7 +51,7 @@
             <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
               >Give Feedback</nuxt-link
             >
-            <nuxt-link class="hover:text-Secondary/50 duration-100 my-3" to=""
+            <nuxt-link class="hover:text-Secondary/50 duration-100 my-3" to="/contact"
               >Contact Us</nuxt-link
             >
           </div>
