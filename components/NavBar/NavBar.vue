@@ -1,81 +1,61 @@
 <template>
   <div
-    class="bg-bgPri px-4 md:py-2 flex items-center border-black/5 border-b relative"
+    @click="bgFixed"
+    class="bg-bgPri px-5 md:py-2 flex items-center border-black/5 border-b relative"
   >
+    <transition
+      enter-active-class="animate__animated animate__fadeIn duration"
+      leave-active-class="animate__animated animate__fadeOut duration"
+    >
+      <button
+        v-if="searchBar"
+        @click="searchBar = false"
+        class="fixed inset-0 w-full h-full cursor-default bg-black/20 backdrop-blur-md z-10"
+      ></button>
+    </transition>
     <!-- desktop -->
     <div class="hidden md:block relative w-full">
-      <div
-        class="w-full flex justify-between items-center z-50 text-PrimaryVariant"
-      >
-        <div class="font-Playfair">
+      <div class="w-full flex justify-between items-center z-50">
+        <div
+          class="font-Playfair text-Secondary flex justify-between items-center w-full"
+        >
           <ul class="flex items-center">
-            <li class="cursor-pointer px-4 hover:text-PrimaryVariant/80 duration-150">
+            <div class="w-24 cursor-pointer text-PrimaryVariant mr-12">
+              <nuxt-link to="/">
+                <img
+                  class="w-full h-full"
+                  src="~/static/lblogo.svg"
+                  alt="Image-Logo"
+                />
+              </nuxt-link>
+            </div>
+            <li
+              class="cursor-pointer px-4 text-PrimaryVariant hover:text-PrimaryVariant/80 duration-150"
+            >
               <nuxt-link to="/"> Home </nuxt-link>
             </li>
-            <!-- <li class="cursor-pointer px-4 hover:text-PrimaryVariant/80 duration-150">
-              <nuxt-link to="product"> Shop </nuxt-link>
-            </li> -->
-            <div
-              @mouseover="openBestOfChoices = true"
-              @mouseleave="openBestOfChoices = false"
-            >
-              <div class="flex items-end px-4">
-                <li class="cursor-pointer">Shop By Category</li>
-                <div class="cursor-pointer w-5 h-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <transition
-                enter-active-class="transition ease-out duration-100"
-                enter-from-class="transform opacity-0 scale-95"
-                enter-to-class="transform opacity-100 scale-100"
-                leave-active-class="transition ease-in duration-75"
-                leave-from-class="transform opacity-100 scale-100"
-                leave-to-class="transform opacity-0 scale-95"
-              >
-                <BestOfChoices
-                  @close="openBestOfChoices = false"
-                  v-if="openBestOfChoices"
-                />
-              </transition>
-            </div>
-            <slot />
-          </ul>
-        </div>
-        <div class="w-24 cursor-pointer">
-          <nuxt-link to="/">
-            <img
-              class="w-full h-full"
-              src="~/static/lblogo.svg"
-              alt="Image-Logo"
-            />
-          </nuxt-link>
-        </div>
-        <div class="font-Playfair">
-          <ul class="flex items-center">
-            <li class="px-4 hover:text-PrimaryVariant/80 duration-150">
-              <nuxt-link to="about">About Lady Bravo</nuxt-link>
+            <li class="px-4 hover:text-Secondary/80 duration-150">
+              <nuxt-link to="/product"> Catalog </nuxt-link>
             </li>
-            <li class="px-4 hover:text-PrimaryVariant/80 duration-150">
-              <nuxt-link to="contact">Contact</nuxt-link>
+            <li class="px-4 hover:text-Secondary/80 duration-150">
+              <nuxt-link to="/about"> About </nuxt-link>
+            </li>
+            <li class="px-4 hover:text-Secondary/80 duration-150">
+              <nuxt-link to="/contact"> Contact </nuxt-link>
             </li>
           </ul>
+          <button
+            @click="searchBar = !searchBar"
+            class="bg-Primary text-bgPri border-PrimaryVariant/50 border text-sm w-fit px-2 py-0.5 rounded-full"
+          >
+            Search...
+          </button>
         </div>
       </div>
     </div>
+
     <!-- mobile -->
-    <div @click="openNav" class="block md:hidden overflow-x-hidden w-full">
+    <div @click="bgFixed" class="block md:hidden overflow-x-hidden w-full">
       <button
         v-if="open"
         @click="open = false"
@@ -117,107 +97,154 @@
         <ul
           v-if="open"
           :class="open === true ? 'openAni' : open === false ? 'closeAni' : ''"
-          class="flex flex-col items-center justify-around text-lg w-full py-5 relative"
+          class="flex flex-col items-center justify-around gap-y-4 text-lg w-full relative overflow-auto"
         >
           <li
             @click="open = false"
-            class="cursor-pointer animate__animated animate__fadeIn delay-1 hover:text-PrimaryVariant/80 duration-150"
+            class="mt-7 animate__animated animate__fadeIn delay-1 hover:text-PrimaryVariant/80 duration-150"
           >
             <nuxt-link to="/"> Home </nuxt-link>
           </li>
-          <!-- <li
-            @click="open = false"
+          <li
+            @click="searchBar = !searchBar"
+            :class="searchBar ? (open = false) : ''"
             class="cursor-pointer animate__animated animate__fadeIn delay-2 hover:text-PrimaryVariant/80 duration-150"
           >
-            <nuxt-link to="product"> Shop </nuxt-link>
-          </li> -->
-          <div @click="openBestOfChoices = !openBestOfChoices">
-            <li
-              class="cursor-pointer animate__animated animate__fadeIn delay-3 hover:text-PrimaryVariant/80 duration-150"
-            >
-              Shop By Category
-            </li>
-          </div>
-
-          <transition
-            enter-active-class="animate__animated animate__slideInRight"
-            leave-active-class="animate__animated animate__slideOutRight"
+            Search
+          </li>
+          <li
+            @click="open = false"
+            class="animate__animated animate__fadeIn delay-3 hover:text-PrimaryVariant/80 duration-150"
           >
-            <div
-              v-if="openBestOfChoices"
-              class="absolute w-full h-[50vh] z-50 pt-5 overflow-auto bg-bgPri/70 backdrop-blur-md"
-            >
-              <BestOfChoices @close="open = false" class="w-full" />
-              <div
-                @click="openBestOfChoices = false"
-                v-if="openBestOfChoices"
-                class="absolute right-10 cursor-pointer animate__animated animate__fadeIn delay-3"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="h-5 w-5 text-Secondary"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                  />
-                </svg>
-              </div>
-            </div>
-          </transition>
-
+            <nuxt-link to="/product"> Catalog </nuxt-link>
+          </li>
           <li
             @click="open = false"
             class="animate__animated animate__fadeIn delay-4 hover:text-PrimaryVariant/80 duration-150"
           >
-            <nuxt-link to="about">About Lady Bravo</nuxt-link>
+            <nuxt-link to="/about">About</nuxt-link>
           </li>
           <li
             @click="open = false"
-            class="animate__animated animate__fadeIn delay-5 hover:text-PrimaryVariant/80 duration-150"
+            class="mb-5 animate__animated animate__fadeIn delay-5 hover:text-PrimaryVariant/80 duration-150"
           >
-            <nuxt-link to="contact">Contact</nuxt-link>
+            <nuxt-link to="/contact">Contact</nuxt-link>
           </li>
         </ul>
       </div>
     </div>
-    <Cart class="md:static absolute top-3 right-2" />
+    <transition
+      enter-active-class="animate__animated animate__fadeIn duration"
+      leave-active-class="animate__animated animate__fadeOut duration"
+    >
+      <div
+        v-if="searchBar"
+        class="sm:w-[35rem] w-full px-2 absolute top-10 left-1/2 -translate-x-1/2 z-50"
+      >
+        <SearchBar
+          customClass="rounded-t-md"
+          v-model="search"
+          placeHolder="Search by name..."
+          class="w-full"
+        />
+        <div
+          v-if="search"
+          class="overflow-auto w-full max-h-[30rem] min-h-max bg-bgPri py-2"
+        >
+          <div
+            @click="gotoProductId(data.id)"
+            v-for="(data, id) in filteredSearch"
+            :key="id"
+            class="bg-SecondaryVariant/20 cursor-pointer my-3 mx-2 rounded flex justify-between items-center px-3 py-1 hover:bg-SecondaryVariant/40"
+          >
+            <div class="w-[80%]">
+              <h1 class="text-Secondary font-Playfair text-lg">
+                {{ data.name }}
+              </h1>
+
+              <p class="text-xs mt-1 font-Roboto text-Secondary/70">
+                {{ data.caption }}
+              </p>
+            </div>
+            <div class="w-10 h-7">
+              <img
+                class="w-full h-full object-cover rounded"
+                :src="data.img[0]"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            v-if="!filteredSearch.length"
+            class="my-3 mx-2 text-Secondary text-lg"
+          >
+            No result found
+          </div>
+        </div>
+
+        <div
+          class="shadow-md font-Great text-Primary text-right sticky bottom-0 bg-bgPri rounded-b-md border-SecondaryVariant border-t px-3 py-2"
+        >
+          Lady Bravo
+        </div>
+      </div>
+    </transition>
+    <Cart class="md:static absolute top-2.5 right-2 ml-5" />
   </div>
 </template>
 
 <script>
+import SearchBar from '~/components/Form/SearchBar.vue'
+import data from '/store/data.json'
 import BestOfChoices from '@/components/NavBar/BestOfChoices.vue'
 
 export default {
   name: 'NavBarVue',
   components: {
-    BestOfChoices
+    BestOfChoices,
+    SearchBar,
   },
   data() {
     return {
       open: null,
       openBestOfChoices: false,
+      data,
+      search: '',
+      searchBar: false,
     }
   },
   methods: {
-    openNav() {
+    gotoProductId(id) {
+      this.$router.push({
+        name: 'product-productId',
+        params: {
+          productId: id,
+        },
+      })
+    },
+    bgFixed() {
       const elem = document.querySelector('body')
-      if (this.open) {
+      if (this.open || this.searchBar) {
         elem.style.overflow = 'hidden'
       } else {
         elem.style.overflow = ''
       }
     },
   },
+  computed: {
+    filteredSearch() {
+      return this.data.filter((data) => {
+        return data.category.toLowerCase().match(this.search.toLowerCase())
+      })
+    },
+  },
 }
 </script>
 
 <style scoped>
+.duration {
+  --animate-duration: 0.2s;
+}
 .delay-1 {
   animation-delay: 0.2s;
 }

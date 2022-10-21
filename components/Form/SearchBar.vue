@@ -23,7 +23,8 @@
       <input
         :value="value"
         @input="(e) => $emit('input', e.target.value)"
-        class="placeholder:text-slate-400 block rounded-t-md border-SecondaryVariant border-[1px] bg-white w-full py-2 p-3 shadow-sm focus:outline-none sm:text-sm"
+        :class="customClass"
+        class="placeholder:text-slate-400 block border-SecondaryVariant border-[1px] bg-white w-full p-3 shadow-sm focus:outline-none"
         :placeholder="placeHolder"
         type="text"
         name="search"
@@ -52,6 +53,10 @@ export default {
       type: String,
       default: '',
     },
+    customClass: {
+      type: String,
+      default: ''
+    }
   },
 }
 </script>

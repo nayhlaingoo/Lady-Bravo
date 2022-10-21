@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="bg-PrimaryVariant w-6 h-[26px] flex justify-center items-center rounded-md relative"
+      class="bg-Primary border-PrimaryVariant/50 border w-8 h-8 flex justify-center items-center rounded-full relative"
     >
       <button
         class="inline-block transition duration-150 ease-in-out"
@@ -16,7 +16,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-3.5 h-3.5 text-white"
+          class="w-5 h-5 text-bgPri"
         >
           <path
             stroke-linecap="round"
