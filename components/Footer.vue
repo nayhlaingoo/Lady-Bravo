@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-bgPri mt-14">
-    <div class="px-10 py-5">
+    <div class="px-10 py-5 max-w-[2000px] mx-auto">
       <div class="lg:flex flex-row justify-between items-start">
         <div class="my-5">
           <div class="w-24">
@@ -11,10 +11,10 @@
           </p>
         </div>
         <div
-          class="flex flex-row lg:justify-around justify-between items-start flex-wrap mb-10 lg:w-4/5"
+          class="flex flex-wrap lg:justify-around justify-between items-start gap-x-5 mb-10 w-[90%]"
         >
           <div
-            class="text-Secondary/70 font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-auto"
+            class="text-Secondary/70 whitespace-nowrap font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-[7rem]"
           >
             <h1 class="text-Secondary font-Playfair text-lg mb-3">Shop</h1>
             <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
@@ -31,7 +31,7 @@
             >
           </div>
           <div
-            class="text-Secondary/70 font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-auto"
+            class="text-Secondary/70 whitespace-nowrap font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-[7rem]"
           >
             <h1 class="text-Secondary font-Playfair text-lg mb-3">Page</h1>
             <nuxt-link class="hover:text-Secondary/50 duration-100" to="/"
@@ -45,7 +45,7 @@
             >
           </div>
           <div
-            class="text-Secondary/70 font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-auto"
+            class="text-Secondary/70 whitespace-nowrap font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-[7rem]"
           >
             <h1 class="text-Secondary font-Playfair text-lg mb-3">Support</h1>
             <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
@@ -56,7 +56,7 @@
             >
           </div>
           <div
-            class="text-Secondary/70 font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-auto"
+            class="text-Secondary/70 whitespace-nowrap font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-[7rem]"
           >
             <h1 class="text-Secondary font-Playfair text-lg mb-3">Social</h1>
             <nuxt-link class="hover:text-Secondary/50 duration-100" to=""

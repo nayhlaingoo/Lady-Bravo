@@ -221,6 +221,7 @@ export default {
           productId: id,
         },
       })
+      this.searchBar = false
     },
     bgFixed() {
       const elem = document.querySelector('body')
