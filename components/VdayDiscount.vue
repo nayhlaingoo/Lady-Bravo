@@ -1,6 +1,6 @@
 <template>
   <div
-    class="md:flex items-center bg-bgPri lg:max-w-[1071px] mx-auto md:h-96 my-10"
+    class="md:flex items-center bg-bgPri max-w-[2000px] mx-auto md:h-96 my-10"
   >
     <div class="md:w-1/2 h-full hidden md:block">
       <img class="mx-auto h-full object-cover" src="~/static/shp.png" alt="" />

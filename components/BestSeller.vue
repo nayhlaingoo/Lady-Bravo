@@ -1,6 +1,6 @@
 <template>
   <div class="py-7">
-    <div class="xl:w-[1200px] mx-auto">
+    <div class="max-w-[2000px] mx-auto">
       <p class="font-Great text-xl text-Secondary text-center mb-1">
         <span class="text-Primary">Explore</span> the Shop
       </p>

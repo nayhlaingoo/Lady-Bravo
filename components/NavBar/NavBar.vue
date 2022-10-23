@@ -44,11 +44,12 @@
               <nuxt-link to="/contact"> Contact </nuxt-link>
             </li>
           </ul>
-          <button
-            @click="searchBar = !searchBar"
-            class="bg-Primary text-bgPri border-PrimaryVariant/50 border text-sm w-fit px-2 py-0.5 rounded-full"
-          >
-            Search...
+          <button @click="searchBar = !searchBar" class="cursor-pointer">
+            <SearchBar
+              placeHolder="Search"
+              disabled
+              customClass="cursor-pointer rounded-md py-1.5"
+            />
           </button>
         </div>
       </div>
@@ -97,20 +98,24 @@
         <ul
           v-if="open"
           :class="open === true ? 'openAni' : open === false ? 'closeAni' : ''"
-          class="flex flex-col items-center justify-around gap-y-4 text-lg w-full relative overflow-auto"
+          class="flex flex-col items-center justify-start py-1.5 gap-y-4 text-lg w-full relative overflow-auto"
         >
-          <li
-            @click="open = false"
-            class="mt-7 animate__animated animate__fadeIn delay-1 hover:text-PrimaryVariant/80 duration-150"
-          >
-            <nuxt-link to="/"> Home </nuxt-link>
-          </li>
-          <li
+          <button
             @click="searchBar = !searchBar"
             :class="searchBar ? (open = false) : ''"
-            class="cursor-pointer animate__animated animate__fadeIn delay-2 hover:text-PrimaryVariant/80 duration-150"
+            class="animate__animated animate__fadeIn delay-1 cursor-pointer w-full mb-2"
           >
-            Search
+            <SearchBar
+              placeHolder="Search"
+              disabled
+              customClass="cursor-pointer rounded py-1 w-full"
+            />
+          </button>
+          <li
+            @click="open = false"
+            class="animate__animated animate__fadeIn delay-2 hover:text-PrimaryVariant/80 duration-150"
+          >
+            <nuxt-link to="/"> Home </nuxt-link>
           </li>
           <li
             @click="open = false"
@@ -126,7 +131,7 @@
           </li>
           <li
             @click="open = false"
-            class="mb-5 animate__animated animate__fadeIn delay-5 hover:text-PrimaryVariant/80 duration-150"
+            class="animate__animated animate__fadeIn delay-5 hover:text-PrimaryVariant/80 duration-150"
           >
             <nuxt-link to="/contact">Contact</nuxt-link>
           </li>
@@ -266,7 +271,7 @@ export default {
     height: 0px;
   }
   to {
-    height: 50vh;
+    height: 17rem;
   }
 }
 
@@ -279,7 +284,7 @@ export default {
 
 @keyframes closeAnimateHeight {
   from {
-    height: 50vh;
+    height: 17rem;
   }
   to {
     height: 0px;

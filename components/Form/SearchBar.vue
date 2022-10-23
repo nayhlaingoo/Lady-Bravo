@@ -27,6 +27,7 @@
         class="placeholder:text-slate-400 block border-SecondaryVariant border-[1px] bg-white w-full p-3 shadow-sm focus:outline-none"
         :placeholder="placeHolder"
         type="text"
+        :disabled="disabled"
         name="search"
       />
     </label>
@@ -55,8 +56,12 @@ export default {
     },
     customClass: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
 }
 </script>

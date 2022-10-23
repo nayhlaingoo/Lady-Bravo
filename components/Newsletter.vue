@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-SecondaryVariant lg:border rounded-sm lg:p-16 p-3 my-14 md:w-[700px] mx-auto"
+    class="border-SecondaryVariant lg:border rounded-sm lg:p-16 p-3 my-14 max-w-[700px] mx-auto"
   >
     <div class="w-full h-full flex flex-col justify-center items-center">
       <div class="font-Great md:text-xl text-Secondary mb-5">

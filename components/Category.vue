@@ -1,6 +1,6 @@
 <template>
-  <div class="px-5 w-full my-10">
-    <h1 class="text-center font-Playfair text-Primary text-6xl">
+  <div class="w-full my-10">
+    <h1 class="px-5 text-center font-Playfair text-Primary text-6xl">
       Shop by Category
     </h1>
 
@@ -113,7 +113,7 @@
 
     <!-- mobile -->
     <div class="block md:hidden">
-      <div class="overflow-auto scrollbar-hide mt-10 rounded-sm">
+      <div class="overflow-auto scrollbar-hide mt-10 rounded-sm ml-4">
         <div class="min-w-max h-[55vh] flex gap-5">
           <div class="w-[300px] h-full relative">
             <nuxt-link to="product">
