@@ -1,39 +1,19 @@
 <template>
   <div>
-    <div
-      class="bg-bgPri relative border-Secondary/5 border-t text-Secondary text-left md:py-16 py-10 md:pl-10 pl-5"
-    >
-      <p class="font-Great md:text-2xl text-xl">
-        <span class="text-Primary">Product</span> detail
-      </p>
-      <h1 class="font-Playfair md:text-5xl text-4xl">
-        {{ currentProduct.category }}
-      </h1>
-      <div class="w-20 h-0.5 rounded-full bg-Secondary mt-5"></div>
-      <div
-        class="absolute -bottom-2.5 xs:right-0 xs:mr-7 flex items-center flex-nowrap gap-x-1 w-fit text-[8px] xs:text-[10px] font-Roboto bg-white text-Secondary border-SecondaryVariant border rounded-full px-3 py-1"
-      >
-        <nuxt-link class="hover:text-Primary" to="./">Product</nuxt-link>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="xs:h-3 xs:w-3 h-2 w-2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-          />
-        </svg>
+    <PageHeader title1="Product" title2="detail" currentPage="Product">
+      <template #currentProduct>
+        <div v-if="currentProduct">
+          <h1>
+            {{ currentProduct.category }}
+          </h1>
+        </div>
+        <div v-else>
+          <p class="font-Roboto">404 error</p>
+        </div>
+      </template>
+    </PageHeader>
 
-        <p class="text-Secondary/70">Product detail</p>
-      </div>
-    </div>
-
-    <div v-if="currentProduct" class="mt-10 mb-16">
+    <div v-if="currentProduct" class="mt-10">
       <div class="px-10 py-5 md:flex justify-center items-center gap-20">
         <Carousel :images="currentProduct.img" />
 
@@ -53,9 +33,10 @@
               v-model="currentProduct.qty"
               placeHolder="Quantity"
               type="number"
+              min="1"
               class="sm:w-60"
             >
-              <ButtonAccent
+              <ButtonSecondary
                 type="submit"
                 class="w-full rounded-sm mt-3"
                 label="Add To Cart"
@@ -151,18 +132,13 @@
           </div>
         </div>
       </div>
+      <BestSeller title="There's More To See">
+        <nuxt-link to="./">
+          <ButtonSecondary label="All Product" />
+        </nuxt-link>
+      </BestSeller>
+      <Footer />
     </div>
-    <div v-else class="text-center mt-5 font-Roboto">
-      <h1 class="text-8xl mb-2 text-slate-700">404 error</h1>
-      <p class="text-xl text-Secondary">This page doesn't exist :(</p>
-    </div>
-
-    <BestSeller title="There's More To See">
-      <nuxt-link to="./">
-        <ButtonAccent label="All Product" />
-      </nuxt-link>
-    </BestSeller>
-    <Footer />
   </div>
 </template>
 
@@ -173,6 +149,13 @@ import InputField from '~/components/Form/InputField.vue'
 export default {
   name: 'ProductId',
   components: { InputField, Accordin },
+  head() {
+    return {
+      title: this.currentProduct
+        ? this.currentProduct.category + '/' + this.currentProduct.id
+        : '',
+    }
+  },
   data() {
     return {
       data,

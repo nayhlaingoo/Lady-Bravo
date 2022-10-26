@@ -65,7 +65,11 @@
       <div
         class="flex items-center justify-center relative border-black/5 border-b py-2"
       >
-        <div @click="open = false" class="w-24 cursor-pointer">
+        <div
+          :class="open ? 'hidden' : 'block'"
+          @click="open = false"
+          class="w-24 cursor-pointer animate__animated animate__fadeIn delay-1"
+        >
           <nuxt-link to="/">
             <img
               class="w-full h-full"
@@ -74,6 +78,18 @@
             />
           </nuxt-link>
         </div>
+        <button
+          @click="searchBar = !searchBar"
+          :class="open ? 'block' : 'hidden'"
+          class="animate__animated animate__fadeIn delay-1 cursor-pointer w-[70%] mx-auto"
+        >
+          <SearchBar
+            :class="searchBar ? (open = false) : ''"
+            placeHolder="Search"
+            disabled
+            customClass="cursor-pointer rounded-md py-1 w-full"
+          />
+        </button>
         <div
           @click="open = !open"
           :class="
@@ -98,19 +114,8 @@
         <ul
           v-if="open"
           :class="open === true ? 'openAni' : open === false ? 'closeAni' : ''"
-          class="flex flex-col items-center justify-start py-1.5 gap-y-4 text-lg w-full relative overflow-auto"
+          class="flex flex-col items-center justify-center py-1.5 gap-y-4 text-lg w-full relative overflow-auto"
         >
-          <button
-            @click="searchBar = !searchBar"
-            :class="searchBar ? (open = false) : ''"
-            class="animate__animated animate__fadeIn delay-1 cursor-pointer w-full mb-2"
-          >
-            <SearchBar
-              placeHolder="Search"
-              disabled
-              customClass="cursor-pointer rounded py-1 w-full"
-            />
-          </button>
           <li
             @click="open = false"
             class="animate__animated animate__fadeIn delay-2 hover:text-PrimaryVariant/80 duration-150"
@@ -194,7 +199,10 @@
         </div>
       </div>
     </transition>
-    <Cart class="md:static absolute top-2.5 right-2 ml-5" />
+    <Cart
+      :class="open ? 'hidden' : 'block'"
+      class="md:static absolute top-2.5 right-2 ml-5 animate__animated animate__fadeIn delay-1"
+    />
   </div>
 </template>
 
@@ -271,7 +279,7 @@ export default {
     height: 0px;
   }
   to {
-    height: 17rem;
+    height: 13rem;
   }
 }
 
@@ -284,7 +292,7 @@ export default {
 
 @keyframes closeAnimateHeight {
   from {
-    height: 17rem;
+    height: 13rem;
   }
   to {
     height: 0px;

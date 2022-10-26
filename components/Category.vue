@@ -9,7 +9,7 @@
         class="flex justify-center items-stretch gap-5 p-3 w-full h-[80vh] mx-auto overflow-hidden mt-10"
       >
         <div class="w-[35%] h-full self-stretch relative">
-          <nuxt-link to="product">
+          <nuxt-link to="/product?category=">
             <img
               @mouseover="imgBtnHover1 = true"
               @mouseleave="imgBtnHover1 = false"
@@ -57,54 +57,60 @@
           class="flex flex-col justify-center items-stretch gap-5 max-w-[50%] h-full overflow-hidden"
         >
           <div class="h-1/2 relative">
-            <img
-              @mouseover="imgBtnHover2 = true"
-              @mouseleave="imgBtnHover2 = false"
-              class="w-full h-full object-cover cursor-pointer"
-              src="https://drive.google.com/uc?export=view&id=1Y3Wv9UvLK2V8aW8zH55RPsE0sjFC14gb"
-              alt=""
-            />
-            <button
-              @mouseover="imgBtnHover2 = true"
-              :class="imgBtnHover2 === true ? 'bg-bgPri text-black' : ''"
-              class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
-            >
-              For Gift
-            </button>
+            <nuxt-link to="/product?category=Present">
+              <img
+                @mouseover="imgBtnHover2 = true"
+                @mouseleave="imgBtnHover2 = false"
+                class="w-full h-full object-cover cursor-pointer"
+                src="https://drive.google.com/uc?export=view&id=1Y3Wv9UvLK2V8aW8zH55RPsE0sjFC14gb"
+                alt=""
+              />
+              <button
+                @mouseover="imgBtnHover2 = true"
+                :class="imgBtnHover2 === true ? 'bg-bgPri text-black' : ''"
+                class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
+              >
+                For Gift
+              </button>
+            </nuxt-link>
           </div>
 
           <div class="flex justify-center items-stretch gap-5 w-full h-1/2">
             <div class="w-1/2 relative">
-              <img
-                @mouseover="imgBtnHover3 = true"
-                @mouseleave="imgBtnHover3 = false"
-                class="w-full h-full object-cover cursor-pointer"
-                src="https://drive.google.com/uc?export=view&id=1b93GUr2X_U0BS1Mbt2v43CUAIJzaBiN-"
-                alt=""
-              />
-              <button
-                @mouseover="imgBtnHover3 = true"
-                :class="imgBtnHover3 === true ? 'bg-bgPri text-black' : ''"
-                class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
-              >
-                Cadbury
-              </button>
+              <nuxt-link to="/product?category=Cadbury">
+                <img
+                  @mouseover="imgBtnHover3 = true"
+                  @mouseleave="imgBtnHover3 = false"
+                  class="w-full h-full object-cover cursor-pointer"
+                  src="https://drive.google.com/uc?export=view&id=1b93GUr2X_U0BS1Mbt2v43CUAIJzaBiN-"
+                  alt=""
+                />
+                <button
+                  @mouseover="imgBtnHover3 = true"
+                  :class="imgBtnHover3 === true ? 'bg-bgPri text-black' : ''"
+                  class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
+                >
+                  Cadbury
+                </button>
+              </nuxt-link>
             </div>
             <div class="w-1/2 relative">
-              <img
-                @mouseover="imgBtnHover4 = true"
-                @mouseleave="imgBtnHover4 = false"
-                class="w-full h-full object-cover cursor-pointer"
-                src="https://drive.google.com/uc?export=view&id=1xN7v6nsy63I68iQAAJTkDW4BoCSEx8wi"
-                alt=""
-              />
-              <button
-                @mouseover="imgBtnHover4 = true"
-                :class="imgBtnHover4 === true ? 'bg-bgPri text-black' : ''"
-                class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
-              >
-                Rocher
-              </button>
+              <nuxt-link to="/product?category=Ferrero%20Rocher">
+                <img
+                  @mouseover="imgBtnHover4 = true"
+                  @mouseleave="imgBtnHover4 = false"
+                  class="w-full h-full object-cover cursor-pointer"
+                  src="https://drive.google.com/uc?export=view&id=1xN7v6nsy63I68iQAAJTkDW4BoCSEx8wi"
+                  alt=""
+                />
+                <button
+                  @mouseover="imgBtnHover4 = true"
+                  :class="imgBtnHover4 === true ? 'bg-bgPri text-black' : ''"
+                  class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
+                >
+                  Rocher
+                </button>
+              </nuxt-link>
             </div>
           </div>
         </div>
@@ -116,7 +122,7 @@
       <div class="overflow-auto scrollbar-hide mt-10 rounded-sm ml-4">
         <div class="min-w-max h-[55vh] flex gap-5">
           <div class="w-[300px] h-full relative">
-            <nuxt-link to="product">
+            <nuxt-link to="/product?category=">
               <img
                 @mouseover="imgBtnHover1 = true"
                 @mouseleave="imgBtnHover1 = false"
@@ -135,54 +141,60 @@
           </div>
 
           <div class="w-[300px] h-full relative">
-            <img
-              @mouseover="imgBtnHover2 = true"
-              @mouseleave="imgBtnHover2 = false"
-              class="w-full h-full object-cover cursor-pointer"
-              src="https://drive.google.com/uc?export=view&id=1Y3Wv9UvLK2V8aW8zH55RPsE0sjFC14gb"
-              alt=""
-            />
-            <button
-              @mouseover="imgBtnHover2 = true"
-              :class="imgBtnHover2 === true ? 'bg-bgPri text-black' : ''"
-              class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
-            >
-              For Gift
-            </button>
+            <nuxt-link to="/product?category=Present">
+              <img
+                @mouseover="imgBtnHover2 = true"
+                @mouseleave="imgBtnHover2 = false"
+                class="w-full h-full object-cover cursor-pointer"
+                src="https://drive.google.com/uc?export=view&id=1Y3Wv9UvLK2V8aW8zH55RPsE0sjFC14gb"
+                alt=""
+              />
+              <button
+                @mouseover="imgBtnHover2 = true"
+                :class="imgBtnHover2 === true ? 'bg-bgPri text-black' : ''"
+                class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
+              >
+                For Gift
+              </button>
+            </nuxt-link>
           </div>
 
           <div class="w-[300px] h-full relative">
-            <img
-              @mouseover="imgBtnHover3 = true"
-              @mouseleave="imgBtnHover3 = false"
-              class="w-full h-full object-cover cursor-pointer"
-              src="https://drive.google.com/uc?export=view&id=1b93GUr2X_U0BS1Mbt2v43CUAIJzaBiN-"
-              alt=""
-            />
-            <button
-              @mouseover="imgBtnHover3 = true"
-              :class="imgBtnHover3 === true ? 'bg-bgPri text-black' : ''"
-              class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
-            >
-              Cadbury
-            </button>
+            <nuxt-link to="/product?category=Cadbury">
+              <img
+                @mouseover="imgBtnHover3 = true"
+                @mouseleave="imgBtnHover3 = false"
+                class="w-full h-full object-cover cursor-pointer"
+                src="https://drive.google.com/uc?export=view&id=1b93GUr2X_U0BS1Mbt2v43CUAIJzaBiN-"
+                alt=""
+              />
+              <button
+                @mouseover="imgBtnHover3 = true"
+                :class="imgBtnHover3 === true ? 'bg-bgPri text-black' : ''"
+                class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
+              >
+                Cadbury
+              </button>
+            </nuxt-link>
           </div>
 
           <div class="w-[300px] h-full relative">
-            <img
-              @mouseover="imgBtnHover4 = true"
-              @mouseleave="imgBtnHover4 = false"
-              class="w-full h-full object-cover cursor-pointer"
-              src="https://drive.google.com/uc?export=view&id=1xN7v6nsy63I68iQAAJTkDW4BoCSEx8wi"
-              alt=""
-            />
-            <button
-              @mouseover="imgBtnHover4 = true"
-              :class="imgBtnHover4 === true ? 'bg-bgPri text-black' : ''"
-              class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
-            >
-              Rocher
-            </button>
+            <nuxt-link to="/product?category=Ferrero%20Rocher">
+              <img
+                @mouseover="imgBtnHover4 = true"
+                @mouseleave="imgBtnHover4 = false"
+                class="w-full h-full object-cover cursor-pointer"
+                src="https://drive.google.com/uc?export=view&id=1xN7v6nsy63I68iQAAJTkDW4BoCSEx8wi"
+                alt=""
+              />
+              <button
+                @mouseover="imgBtnHover4 = true"
+                :class="imgBtnHover4 === true ? 'bg-bgPri text-black' : ''"
+                class="border-bgPri border text-SecondaryVariant rounded-full w-32 p-3 absolute top-1/3 left-1/2 -translate-x-1/2 translate-y-1/2 duration-300"
+              >
+                Rocher
+              </button>
+            </nuxt-link>
           </div>
         </div>
       </div>

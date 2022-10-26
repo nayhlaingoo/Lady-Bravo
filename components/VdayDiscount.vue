@@ -22,7 +22,7 @@
         chocolates.
       </h1>
       <nuxt-link class="md:self-start" to="product">
-        <ButtonAccent label="Shop Now" />
+        <ButtonSecondary label="Shop Now" />
       </nuxt-link>
     </div>
     <div class="w-1/2 h-full mx-auto block md:hidden mt-2">
@@ -32,9 +32,9 @@
 </template>
 
 <script>
-import ButtonAccent from './Button/ButtonAccent.vue'
+import ButtonSecondary from './Button/ButtonSecondary.vue'
 export default {
-  components: { ButtonAccent },
+  components: { ButtonSecondary },
   name: 'VdayDiscountVue',
 }
 </script>

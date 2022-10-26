@@ -5,7 +5,7 @@
     <Counter :seconds="60" :minutes="60" :hours="24" :days="30" />
     <BestSeller title="Best Seller">
       <nuxt-link to="Product">
-        <ButtonAccent label="All Product" />
+        <ButtonSecondary label="All Product" />
       </nuxt-link>
     </BestSeller>
     <VdayDiscount />

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="z-10">
     <div
       class="bg-Primary border-PrimaryVariant/50 border w-8 h-8 flex justify-center items-center rounded-full relative"
     >
@@ -84,7 +84,7 @@
             >
               <div class="flex justify-start items-center gap-3">
                 <p>Total Price: {{ totalPrice }}Ks</p>
-                <ButtonAccent class="text-sm rounded-md" label="Check out" />
+                <ButtonSecondary class="text-sm rounded-md" label="Check out" />
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@
           </div>
         </div>
         <template #footer>
-          <ButtonAccent @click="modalOpen = false" label="Submit" class="rounded-md mt-16" />
+          <ButtonSecondary @click="modalOpen = false" label="Submit" class="rounded-md mt-16" />
         </template>
       </Modal>
     </div>

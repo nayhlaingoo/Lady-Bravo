@@ -18,7 +18,7 @@
           type="text"
           placeholder="email@example.com"
         />
-        <ButtonSecondary label="Notify me" />
+        <ButtonPrimary label="Notify me" class="rounded-md whitespace-nowrap py-2 sm:w-auto w-full" />
       </div>
       <div class="flex flex-wrap gap-10 justify-center items-center">
         <div>

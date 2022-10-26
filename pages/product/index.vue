@@ -1,56 +1,17 @@
 <template>
   <div class="w-full h-full">
-    <!-- Header -->
-    <div
-      class="bg-bgPri relative border-Secondary/5 border-t text-Secondary text-left md:py-24 py-16 md:pl-10 pl-5"
-    >
-      <p class="font-Great md:text-2xl text-xl">
-        <span class="text-Primary">Best</span> Products
-      </p>
-      <h1
-        v-if="selectedCategory === ''"
-        class="font-Playfair md:text-5xl text-4xl"
-      >
-        Our Catalog
-      </h1>
-      <h1
-        v-else
-        v-for="(data, index) in filteredData.slice(0, 1)"
-        :key="index"
-        class="font-Playfair md:text-5xl text-4xl"
-      >
-        {{ data.title }}
-      </h1>
-      <div class="w-20 h-0.5 rounded-full bg-Secondary mt-5"></div>
-      <div
-        class="absolute -bottom-2.5 xs:right-0 xs:mr-7 flex items-center flex-nowrap gap-x-1 w-fit text-[8px] xs:text-xs font-Roboto bg-white text-Secondary border-SecondaryVariant border rounded-full px-3 py-1"
-      >
-        <p>product</p>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="xs:h-3 xs:w-3 h-2 w-2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-          />
-        </svg>
-        <p v-if="selectedCategory === ''">product</p>
-        <p
+    <PageHeader title1="Best" title2="Product" currentPage="Product">
+      <template #currentProduct>
+        <h1 v-if="!selectedCategory">Our Catalog</h1>
+        <h1
           v-else
           v-for="(data, index) in filteredData.slice(0, 1)"
           :key="index"
         >
-          {{ data.name }}
-        </p>
-      </div>
-    </div>
-    <!-- end -->
+          {{ data.title }}
+        </h1>
+      </template>
+    </PageHeader>
     <div
       class="text-Secondary md:flex gap-x-14 h-full w-full md:px-10 px-3 my-14"
     >
@@ -60,9 +21,7 @@
         <h1 class="text-3xl mb-10 font-Playfair w-full">Categories</h1>
         <div class="flex flex-wrap md:flex-col gap-y-5">
           <button
-            :class="
-              selectedCategory === '' ? 'bg-Primary text-bgPri shadow-sm' : ''
-            "
+            :class="selectedCategory ? '' : 'bg-Primary text-bgPri shadow-sm'"
             @click="selectedCategory = ''"
             class="hover:bg-Primary hover:text-bgPri mx-1 px-3 rounded-full w-fit duration-75"
           >
@@ -190,7 +149,7 @@
         <div class="w-full flex flex-col justify-center items-center mt-7">
           <span class="text-Secondary/60 mb-4">1/2</span>
           <nuxt-link to="">
-            <ButtonAccent label="Next" />
+            <ButtonSecondary label="Next" />
           </nuxt-link>
         </div>
       </div>
@@ -213,6 +172,11 @@ export default {
     SocialMedia,
     Footer,
   },
+  head() {
+    return {
+      title: 'Categories',
+    }
+  },
 
   data() {
     return {
@@ -222,6 +186,22 @@ export default {
       search: '',
       searchBar: false,
     }
+  },
+  watch: {
+    selectedCategory: {
+      handler() {
+        this.$router
+          .replace({
+            query: {
+              category: this.selectedCategory,
+            },
+          })
+          .catch(() => {})
+      },
+    },
+  },
+  created() {
+    this.selectedCategory = this.$route.query.category
   },
   methods: {
     gotoProductId(id) {

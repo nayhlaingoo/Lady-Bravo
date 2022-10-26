@@ -17,16 +17,16 @@
             class="text-Secondary/70 whitespace-nowrap font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-[7rem]"
           >
             <h1 class="text-Secondary font-Playfair text-lg mb-3">Shop</h1>
-            <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
-              >Shop by Catalog</nuxt-link
-            >
-            <nuxt-link class="hover:text-Secondary/50 duration-100 my-3" to=""
+            <nuxt-link class="hover:text-Secondary/50 duration-100" to="/product?category=Present"
               >Present</nuxt-link
             >
-            <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
+            <nuxt-link class="hover:text-Secondary/50 duration-100 my-3" to="/product?category=KitKat"
+              >KitKat</nuxt-link
+            >
+            <nuxt-link class="hover:text-Secondary/50 duration-100" to="/product?category=Ferrero%20Rocher"
               >Ferrero Rocher</nuxt-link
             >
-            <nuxt-link class="hover:text-Secondary/50 duration-100 mt-3" to=""
+            <nuxt-link class="hover:text-Secondary/50 duration-100 mt-3" to="/product?category=Cadbury"
               >Cadbury</nuxt-link
             >
           </div>
