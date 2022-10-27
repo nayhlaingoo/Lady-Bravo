@@ -11,7 +11,7 @@
       </p>
       <p class="font-Roboto text-xl mt-7 mb-4">Next arrival</p>
       <div
-        class="sm:flex items-center justify-center gap-3 sm:w-[30rem] w-[90%] px-2 mx-auto my-4"
+        class="sm:flex items-center justify-center gap-3 sm:max-w-[30rem] xs:w-[80%] px-2 mx-auto my-4"
       >
         <input
           class="w-full text-Secondary border-SecondaryVariant border focus:border-Secondary rounded-md outline-none p-2 sm:mb-0 mb-2"

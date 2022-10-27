@@ -1,6 +1,5 @@
 <template>
   <div
-    @click="bgFixed"
     class="bg-bgPri px-5 md:py-2 flex items-center border-black/5 border-b relative"
   >
     <transition
@@ -10,7 +9,7 @@
       <button
         v-if="searchBar"
         @click="searchBar = false"
-        class="fixed inset-0 w-full h-full cursor-default bg-black/20 backdrop-blur-md z-10"
+        class="fixed inset-0 w-full h-full cursor-default bg-black/20 backdrop-blur-md z-50"
       ></button>
     </transition>
     <!-- desktop -->
@@ -68,11 +67,11 @@
         <div
           :class="open ? 'hidden' : 'block'"
           @click="open = false"
-          class="w-24 cursor-pointer animate__animated animate__fadeIn delay-1"
+          class="w-36 cursor-pointer animate__animated animate__fadeIn delay-1"
         >
           <nuxt-link to="/">
             <img
-              class="w-full h-full"
+              class="ml-auto w-24 h-full"
               src="~/static/lblogo.svg"
               alt="Image-Logo"
             />
@@ -81,7 +80,7 @@
         <button
           @click="searchBar = !searchBar"
           :class="open ? 'block' : 'hidden'"
-          class="animate__animated animate__fadeIn delay-1 cursor-pointer w-[70%] mx-auto"
+          class="animate__animated animate__fadeInDown animate__fast cursor-pointer w-[70%] mx-auto"
         >
           <SearchBar
             :class="searchBar ? (open = false) : ''"
@@ -201,7 +200,7 @@
     </transition>
     <Cart
       :class="open ? 'hidden' : 'block'"
-      class="md:static absolute top-2.5 right-2 ml-5 animate__animated animate__fadeIn delay-1"
+      customClass="md:ml-5 animate__animated animate__fadeIn animate__delay-1s"
     />
   </div>
 </template>

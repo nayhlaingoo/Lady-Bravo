@@ -1,5 +1,5 @@
 <template>
-  <div class="z-10">
+  <div :class="customClass" class="z-10 relative">
     <div
       class="bg-Primary border-PrimaryVariant/50 border w-8 h-8 flex justify-center items-center rounded-full relative"
     >
@@ -24,10 +24,9 @@
             d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
           />
         </svg>
-
         <div
           v-if="products.length"
-          class="bg-red-500 border-bgPri border-[1px] p-2 rounded-full w-3 h-3 flex items-center justify-center absolute -top-1 -left-2"
+          class="bg-red-500 border-bgPri border-[1px] p-2 rounded-full w-4 h-4 flex items-center justify-center absolute -top-1 -left-2"
         >
           <p class="text-white font-Roboto text-xs">
             {{ products.length }}
@@ -112,8 +111,7 @@
             <div class="border-bgPri border-b py-2 flex">
               <p class="w-24">about:</p>
               <span class="sm:w-96 w-[70%]">
-
-              {{ product.caption }}
+                {{ product.caption }}
               </span>
             </div>
             <div class="border-bgPri border-b py-2 flex">
@@ -165,10 +163,31 @@
           </div>
         </div>
         <template #footer>
-          <ButtonSecondary @click="modalOpen = false" label="Submit" class="rounded-md mt-16" />
+          <ButtonSecondary
+            @click="modalOpen = false"
+            label="Submit"
+            class="rounded-md mt-16"
+          />
         </template>
       </Modal>
     </div>
+    <transition
+      enter-active-class="animate__animated animate__fadeInDown animate__fast"
+      leave-active-class="animate__animated animate__fadeOutUp animate__fast"
+    >
+      <div
+        v-if="successAlert"
+        class="fixed z-10 inset-0 w-full h-fit max-w-[1000px] mx-auto mt-1"
+      >
+        <div
+          class="p-4 mx-3 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+          role="alert"
+        >
+          <span class="font-medium">successfully added!</span> Your product
+          added into cart.
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -176,6 +195,12 @@
 import Modal from './Modal.vue'
 export default {
   name: 'CartVue',
+  props: {
+    customClass: {
+      type: String,
+      default: '',
+    },
+  },
   components: {
     Modal,
   },
@@ -184,6 +209,7 @@ export default {
       product: null,
       products: [],
       modalOpen: false,
+      successAlert: false,
     }
   },
   computed: {
@@ -198,9 +224,12 @@ export default {
         alreadyExist.qty = item.qty
       } else {
         this.products.push({ ...item })
+        this.successAlert = true
+        setTimeout(() => {
+          this.successAlert = false
+        }, 4000)
       }
       console.log('added into cart', item)
-      // if (!alreadyExist) this.products.push(item)
     })
   },
   methods: {

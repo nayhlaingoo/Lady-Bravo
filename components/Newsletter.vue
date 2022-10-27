@@ -19,12 +19,12 @@
           <InputField
             placeHolder="@example.com"
             type="text"
-            class="w-full xs:flex items-center justify-center gap-3"
+            customClass="w-full flex flex-wrap items-center justify-center gap-3"
           >
             <ButtonPrimary
               type="submit"
               label="Subscribe"
-              class="xs:w-56 w-full rounded-md xs:mt-0 mt-2"
+              class="sm:w-32 w-full rounded-md"
             />
           </InputField>
         </div>
