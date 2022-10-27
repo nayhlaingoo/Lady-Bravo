@@ -237,7 +237,7 @@ export default {
     },
     bgFixed() {
       const elem = document.querySelector('body')
-      if (this.open || this.searchBar) {
+      if (this.open) {
         elem.style.overflow = 'hidden'
       } else {
         elem.style.overflow = ''
