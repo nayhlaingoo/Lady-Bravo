@@ -100,7 +100,7 @@ export default {
   },
   head() {
     return {
-      title: 'Contact',
+      title: 'Lady - Bravo Chocolate World Contact',
     }
   },
 }

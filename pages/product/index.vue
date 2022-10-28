@@ -174,7 +174,7 @@ export default {
   },
   head() {
     return {
-      title: 'Categories',
+      title: 'Lady - Bravo Chocolate World Categories',
     }
   },
 

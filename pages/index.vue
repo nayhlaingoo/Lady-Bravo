@@ -97,7 +97,7 @@ Drop your email for our newsletter to stay up to date.`,
   },
   head() {
     return {
-      title: 'Lady Bravo',
+      title: 'Lady - Bravo Chocolate World',
     }
   },
   components: { Carousel, Accordin },

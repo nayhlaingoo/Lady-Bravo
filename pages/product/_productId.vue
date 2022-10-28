@@ -152,7 +152,11 @@ export default {
   head() {
     return {
       title: this.currentProduct
-        ? this.currentProduct.category + '/' + this.currentProduct.id
+        ? this.currentProduct.category +
+          '/' +
+          this.currentProduct.id +
+          '/' +
+          this.currentProduct.caption.toLowerCase()
         : '',
     }
   },
@@ -163,22 +167,20 @@ export default {
       error: false,
     }
   },
-  watch: {
-    currentProduct: {
-      created() {
-        this.$router
-          .add({
-            query: {
-              category: this.currentProduct.caption,
-            },
-          })
-          .catch(() => {})
-      },
-    },
+  mounted() {
+    console.log(this.$route.query.category)
   },
-  // created() {
-  //   this.selectedCategory = this.$route.query.category
-  // },
+  created() {
+    this.$router
+      .replace({
+        query: {
+          category: this.currentProduct.caption.replaceAll(' ', '-'),
+        },
+      })
+      .catch(() => {})
+
+    this.selectedCategory = this.$route.query.category
+  },
   methods: {
     addToCart(currentProduct) {
       if (!currentProduct.qty) {
@@ -197,9 +199,6 @@ export default {
       const product = data.find((d) => d.id == this.$route.params.productId)
       return product
     },
-  },
-  mounted() {
-    console.log()
   },
 }
 </script>
