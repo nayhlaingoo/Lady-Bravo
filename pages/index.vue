@@ -9,10 +9,10 @@
         Coming Soon
       </p>
       <p class="text-xl mb-2">“Next arrival”</p>
-      <pre class="mb-2 font-Roboto">{{ description }}</pre>
+      <pre class="mb-3 font-Roboto">{{ description }}</pre>
       <button
         @click="scrollIntoNewsLetter()"
-        class="hover:underline text-blue-500"
+        class="text-white bg-gradient-to-r from-slate-400 via-slate-500 to-slate-600 hover:shadow-md duration-150 rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
       >
         notify me
       </button>
