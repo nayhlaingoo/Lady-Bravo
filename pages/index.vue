@@ -2,35 +2,51 @@
   <div>
     <Hero />
     <Category />
-    <Counter :seconds="60" :minutes="60" :hours="24" :days="30" />
+    <div
+      class="text-Secondary font-Roboto text-center max-w-[2000px] bg-gradient-to-tr from-bgPri to-bgPri px-2 py-10 my-7 mx-auto"
+    >
+      <p class="text-center font-Playfair tracking-widest text-5xl px-5 mb-7">
+        Coming Soon
+      </p>
+      <p class="text-xl mb-2">“Next arrival”</p>
+      <pre class="mb-2 font-Roboto">{{ description }}</pre>
+      <button
+        @click="scrollIntoNewsLetter()"
+        class="hover:underline text-blue-500"
+      >
+        notify me
+      </button>
+    </div>
     <BestSeller title="Best Seller">
       <nuxt-link to="Product">
         <ButtonSecondary label="All Product" />
       </nuxt-link>
     </BestSeller>
     <VdayDiscount />
-    <Newsletter />
+    <Newsletter id="newsLetter" />
     <PaymentLogo />
-    <div
-      class="lg:flex justify-center items-center gap-20 xl:w-[1024px] w-full px-4 mx-auto text-Secondary font-Playfair"
-    >
-      <div class="self-start lg:max-w-[400px] lg:mb-0 mb-10">
-        <p class="font-Great text-xl">
-          <span class="text-Primary">Payment</span> & Service
-        </p>
-        <h1 class="text-4xl tracking-wide">Frequently Asked Questions</h1>
-        <p class="font-Roboto sm:text-base text-sm mt-6 text-Secondary/70">
-          Read about our delivery services, return policy and payment method.
-        </p>
-      </div>
-      <div class="lg:w-[550px]">
-        <Accordin
-          class="w-full"
-          v-for="(faq, i) in faq"
-          :key="i"
-          :title="faq.que"
-          :description="faq.ans"
-        />
+    <div class="max-w-[2000px] mx-auto mb-20">
+      <div class="sm:px-7 px-4">
+        <div class="text-Secondary text-center mb-7">
+          <p class="font-Great">
+            <span class="text-Primary tracking-wide text-lg">Payment</span> &
+            Service
+          </p>
+          <h1 class="text-4xl font-Playfair">Frequently Asked Question</h1>
+          <div class="w-20 h-0.5 rounded-full bg-Secondary mx-auto mt-5"></div>
+        </div>
+        <div
+          class="grid md:grid-cols-2 grid-cols-1 gap-10 max-w-[1200px] mx-auto"
+        >
+          <div
+            v-for="(faq, index) in faq"
+            :key="index"
+            class="max-w-[40rem] md:px-5"
+          >
+            <h1 class="text-Secondary text-lg mb-1.5">{{ faq.question }}</h1>
+            <p class="text-Secondary/80">{{ faq.answer }}</p>
+          </div>
+        </div>
       </div>
     </div>
     <SocialMedia />
@@ -47,34 +63,36 @@ export default {
     return {
       faq: [
         {
-          que: 'How to order?',
-          ans: `I'm a paragraph. Click here to add your own text and edit me. It’s
+          question: 'How much is shipping?',
+          answer: `I'm a paragraph. Click here to add your own text and edit me. It’s
               easy. Just click “Edit Text” or double click me to add your own
               content and make changes to the font. Feel free to drag and drop
               me anywhere you like on your page.`,
         },
         {
-          que: 'What is your return policy?',
-          ans: `I'm a paragraph. Click here to add your own text and edit me. It’s
+          question: 'What is your return policy?',
+          answer: `I'm a paragraph. Click here to add your own text and edit me. It’s
               easy. Just click “Edit Text” or double click me to add your own
               content and make changes to the font. Feel free to drag and drop
               me anywhere you like on your page.`,
         },
         {
-          que: 'How much is shipping?',
-          ans: `I'm a paragraph. Click here to add your own text and edit me. It’s
+          question: 'How can i order?',
+          answer: `I'm a paragraph. Click here to add your own text and edit me. It’s
               easy. Just click “Edit Text” or double click me to add your own
               content and make changes to the font. Feel free to drag and drop
               me anywhere you like on your page.`,
         },
         {
-          que: 'When will my order ship?',
-          ans: `I'm a paragraph. Click here to add your own text and edit me. It’s
+          question: 'When will my order ship?',
+          answer: `I'm a paragraph. Click here to add your own text and edit me. It’s
               easy. Just click “Edit Text” or double click me to add your own
               content and make changes to the font. Feel free to drag and drop
               me anywhere you like on your page.`,
         },
       ],
+      description: `Get notified when next products arrived? 
+Drop your email for our newsletter to stay up to date.`,
     }
   },
   head() {
@@ -83,5 +101,11 @@ export default {
     }
   },
   components: { Carousel, Accordin },
+  methods: {
+    scrollIntoNewsLetter() {
+      const elem = document.getElementById('newsLetter')
+      elem.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    },
+  },
 }
 </script>

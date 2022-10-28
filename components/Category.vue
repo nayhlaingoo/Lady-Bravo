@@ -6,7 +6,7 @@
 
     <div class="hidden md:block">
       <div
-        class="flex justify-center items-stretch gap-5 p-3 w-full h-[80vh] mx-auto overflow-hidden mt-10"
+        class="flex justify-center items-stretch gap-5 p-3 w-full h-[30rem] mx-auto overflow-hidden mt-10"
       >
         <div class="w-[35%] h-full self-stretch relative">
           <nuxt-link to="/product?category=">
@@ -120,7 +120,7 @@
     <!-- mobile -->
     <div class="block md:hidden">
       <div class="overflow-auto scrollbar-hide mt-10 rounded-sm ml-4">
-        <div class="min-w-max h-[55vh] flex gap-5">
+        <div class="min-w-max h-[30rem] flex gap-5">
           <div class="w-[300px] h-full relative">
             <nuxt-link to="/product?category=">
               <img

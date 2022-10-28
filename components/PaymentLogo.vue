@@ -1,30 +1,5 @@
 <template>
   <div class="relative xl:max-w-[2000px] mx-auto">
-    <!-- <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-6 w-6 absolute text-Secondary left-0 top-[50%] -translate-y-[50%] md:hidden block"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      stroke-width="2"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M15 19l-7-7 7-7"
-      />
-    </svg>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-6 w-6 absolute text-Secondary right-0 top-[50%] -translate-y-[50%] md:hidden block"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      stroke-width="2"
-    >
-      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-    </svg> -->
-
     <div
       class="font-Playfair md:flex justify-center items-center md:overflow-hidden overflow-auto scrollbar-hide text-2xl select-none text-Secondary/50 bg-bgPri md:p-16 py-16 px-5 mb-24"
     >
@@ -123,10 +98,10 @@
 
 <script>
 export default {
-    name: 'PaymentLogoVue',
-    data() {
-        return {}
-    }
+  name: 'PaymentLogoVue',
+  data() {
+    return {}
+  },
 }
 </script>
 

@@ -18,7 +18,7 @@
         <div class="w-full my-4">
           <InputField
             placeHolder="@example.com"
-            type="text"
+            type="email"
             customClass="w-full flex flex-wrap items-center justify-center gap-3"
           >
             <ButtonPrimary

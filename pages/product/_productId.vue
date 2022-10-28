@@ -163,6 +163,22 @@ export default {
       error: false,
     }
   },
+  watch: {
+    currentProduct: {
+      created() {
+        this.$router
+          .add({
+            query: {
+              category: this.currentProduct.caption,
+            },
+          })
+          .catch(() => {})
+      },
+    },
+  },
+  // created() {
+  //   this.selectedCategory = this.$route.query.category
+  // },
   methods: {
     addToCart(currentProduct) {
       if (!currentProduct.qty) {
