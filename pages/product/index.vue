@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-full">
     <PageHeader title1="Best" title2="Product" currentPage="Product">
-      <template #currentProduct>
+      <template #subCurrentProduct1>
         <h1 v-if="!selectedCategory">Our Catalog</h1>
         <h1
           v-else
@@ -9,6 +9,16 @@
           :key="index"
         >
           {{ data.title }}
+        </h1>
+      </template>
+      <template #subCurrentProduct2>
+        <h1 v-if="!selectedCategory">Catalog</h1>
+        <h1
+          v-else
+          v-for="(data, index) in filteredData.slice(0, 1)"
+          :key="index"
+        >
+          {{ data.name }}
         </h1>
       </template>
     </PageHeader>

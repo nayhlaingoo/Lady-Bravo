@@ -227,7 +227,7 @@ export default {
         this.successAlert = true
         setTimeout(() => {
           this.successAlert = false
-        }, 4000)
+        }, 3000)
       }
       console.log('added into cart', item)
     })

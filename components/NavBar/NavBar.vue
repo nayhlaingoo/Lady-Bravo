@@ -19,7 +19,7 @@
           class="font-Playfair text-Secondary flex justify-between items-center w-full"
         >
           <ul class="flex items-center">
-            <div class="w-24 cursor-pointer text-PrimaryVariant mr-12">
+            <div class="w-24 cursor-pointer text-PrimaryVariant mr-2">
               <nuxt-link to="/">
                 <img
                   class="w-full h-full"
@@ -43,13 +43,18 @@
               <nuxt-link to="/contact"> Contact </nuxt-link>
             </li>
           </ul>
-          <button @click="searchBar = !searchBar" class="cursor-pointer">
-            <SearchBar
-              placeHolder="Search"
-              disabled
-              customClass="cursor-pointer rounded-md py-1.5"
-            />
-          </button>
+          <div>
+            <nuxt-link to="/faq" class="text-Secondary/70 font- text-sm pr-3">
+              FAQ
+            </nuxt-link>
+            <button @click="searchBar = !searchBar" class="cursor-pointer">
+              <SearchBar
+                placeHolder="Search"
+                disabled
+                customClass="cursor-pointer w-40 rounded-md py-1.5"
+              />
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -138,6 +143,12 @@
             class="animate__animated animate__fadeIn delay-5 hover:text-PrimaryVariant/80 duration-150"
           >
             <nuxt-link to="/contact">Contact</nuxt-link>
+          </li>
+          <li
+            @click="open = false"
+            class="animate__animated animate__fadeIn delay-6 hover:text-PrimaryVariant/80 duration-150"
+          >
+            <nuxt-link to="/faq">FAQ</nuxt-link>
           </li>
         </ul>
       </div>
@@ -273,12 +284,15 @@ export default {
 .delay-5 {
   animation-delay: 0.8s;
 }
+.delay-6 {
+  animation-delay: 1s;
+}
 @keyframes openAnimateHeight {
   from {
     height: 0px;
   }
   to {
-    height: 13rem;
+    height: 16rem;
   }
 }
 
@@ -291,7 +305,7 @@ export default {
 
 @keyframes closeAnimateHeight {
   from {
-    height: 13rem;
+    height: 16rem;
   }
   to {
     height: 0px;

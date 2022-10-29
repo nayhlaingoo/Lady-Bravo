@@ -7,7 +7,7 @@
       <span class="text-Primary">{{ title1 }}</span> {{ title2 }}
     </p>
     <h1 class="font-Playfair md:text-5xl text-4xl">
-      <slot name="currentProduct" />
+      <slot name="subCurrentProduct1" />
     </h1>
     <div class="w-20 h-0.5 rounded-full bg-Secondary mt-5"></div>
     <div
@@ -29,7 +29,7 @@
         />
       </svg>
       <p class="text-Secondary/70">
-        <slot name="currentProduct" />
+        <slot name="subCurrentProduct2" />
       </p>
     </div>
   </div>

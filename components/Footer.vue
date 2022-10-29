@@ -48,8 +48,8 @@
             class="text-Secondary/70 whitespace-nowrap font-Roboto text-sm flex flex-col mx-3 md:mx-0 mt-5 w-[7rem]"
           >
             <h1 class="text-Secondary font-Playfair text-lg mb-3">Support</h1>
-            <nuxt-link class="hover:text-Secondary/50 duration-100" to=""
-              >Give Feedback</nuxt-link
+            <nuxt-link class="hover:text-Secondary/50 duration-100" to="/faq"
+              >FAQ</nuxt-link
             >
             <nuxt-link class="hover:text-Secondary/50 duration-100 my-3" to="/contact"
               >Contact Us</nuxt-link

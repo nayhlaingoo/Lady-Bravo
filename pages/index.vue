@@ -25,7 +25,7 @@
     <VdayDiscount />
     <Newsletter id="newsLetter" />
     <PaymentLogo />
-    <div class="max-w-[2000px] mx-auto mb-20">
+    <!-- <div class="max-w-[2000px] mx-auto mb-20">
       <div class="sm:px-7 px-4">
         <div class="text-Secondary text-center mb-7">
           <p class="font-Great">
@@ -46,9 +46,45 @@
             <h1 class="text-Secondary text-lg mb-1.5">{{ faq.question }}</h1>
             <p class="text-Secondary/80">{{ faq.answer }}</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </div> -->
+        <!-- <div class="accordion" id="accordionExample">
+          <div
+            v-for="(faq, index) in faq"
+            :key="index"
+            class="accordion-item bg-white font-Roboto w-full sm:w-96 mt-7"
+          >
+            <h2
+              class="accordion-header border-b border-SecondaryVariant/50 bg-white mb-0 duration-150 hover:text-Secondary/70"
+              id="headingOne"
+            >
+              <button
+                class="relative flex justify-between items-center w-full pb-3 text-left text-sm xs:text-base"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="index"
+              >
+                {{ faq.question }}
+                <span class="text-Secondary/50">+</span>
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse duration-500"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div
+                class="accordion-body py-3 border-b border-SecondaryVariant/50 text-sm text-Secondary/70"
+              >
+                {{ faq.answer }}
+              </div>
+            </div>
+          </div>
+        </div> -->
+      <!-- </div>
+    </div> -->
     <SocialMedia />
     <Footer />
   </div>

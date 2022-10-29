@@ -1,19 +1,23 @@
 <template>
   <div class="font-Roboto">
     <PageHeader title1="Contact" title2="Us" currentPage="Contact">
-      <template #currentProduct>
+      <template #subCurrentProduct1>
         <h1>Get in Touch</h1>
       </template>
+      <template #subCurrentProduct2>
+        <h1>Contact</h1>
+      </template>
     </PageHeader>
-    <div class="md:flex xl:gap-16 md:gap-10 items-center justify-center lg:px-20 px-4 my-14 xl:max-w-[2000px] mx-auto">
+    <div
+      class="md:flex xl:gap-16 md:gap-10 items-center justify-center lg:px-20 px-4 my-14 xl:max-w-[2000px] mx-auto"
+    >
       <div
-        class="bg-white font-Roboto border-SecondaryVariant border pb-16 p-10 rounded-md md:w-1/2"
+        class="bg-white font-Roboto border-SecondaryVariant border pb-16 md:p-10 py-10 px-2 rounded-md md:w-1/2"
       >
         <div class="text-Secondary text-center mb-7">
           <h1 class="mb-4 font-Playfair text-3xl">Contact Us</h1>
           <p>
-            Got a technical issue? Want to send feedback about a beta feature?
-            Need details about our Business plan? Let us know.
+            {{ description }}
           </p>
         </div>
         <InputField
@@ -31,7 +35,9 @@
         </InputField>
       </div>
       <div class="md:w-1/2">
-        <div class="text-center rounded p-7 text-Secondary max-w-[35rem] mx-auto">
+        <div
+          class="text-center rounded p-7 text-Secondary max-w-[35rem] mx-auto"
+        >
           <div
             class="bg-bgPri flex justify-center items-center p-3 rounded-md w-fit mx-auto"
           >
@@ -57,7 +63,9 @@
           </p>
           <a href="">ladybravo@gmail.com</a>
         </div>
-        <div class="text-center rounded p-7 text-Secondary max-w-[35rem] mx-auto">
+        <div
+          class="text-center rounded p-7 text-Secondary max-w-[35rem] mx-auto"
+        >
           <div
             class="bg-bgPri flex justify-center items-center p-3 rounded-md w-fit mx-auto"
           >
@@ -95,6 +103,12 @@
 import InputField from '~/components/Form/InputField.vue'
 export default {
   name: 'ContactVue',
+  data() {
+    return {
+      description: `Got a technical issue? Want to send feedback about a beta feature?
+            Need details about our Business plan? Let us know.`,
+    }
+  },
   components: {
     InputField,
   },

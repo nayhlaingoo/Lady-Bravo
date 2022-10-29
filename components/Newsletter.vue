@@ -31,7 +31,7 @@
         <p class="text-[10px] text-Secondary/70 text-center">
           We care about the protection of your data. Read our
           <span class="underline text-Secondary"
-            ><nuxt-link to="">Privacy Policy.</nuxt-link></span
+            ><nuxt-link to="/faq">Privacy Policy.</nuxt-link></span
           >
         </p>
       </div>

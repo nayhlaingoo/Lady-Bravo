@@ -1,7 +1,7 @@
 <template>
   <div>
     <PageHeader title1="Product" title2="detail" currentPage="Product">
-      <template #currentProduct>
+      <template #subCurrentProduct1>
         <div v-if="currentProduct">
           <h1>
             {{ currentProduct.category }}
@@ -9,6 +9,16 @@
         </div>
         <div v-else>
           <p class="font-Roboto">404 error</p>
+        </div>
+      </template>
+      <template #subCurrentProduct2>
+        <div v-if="currentProduct">
+          <h1>
+            {{ currentProduct.name }}
+          </h1>
+        </div>
+        <div v-else>
+          <p class="font-Roboto">404</p>
         </div>
       </template>
     </PageHeader>
@@ -178,8 +188,6 @@ export default {
         },
       })
       .catch(() => {})
-
-    this.selectedCategory = this.$route.query.category
   },
   methods: {
     addToCart(currentProduct) {
