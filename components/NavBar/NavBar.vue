@@ -2,16 +2,6 @@
   <div
     class="bg-bgPri px-5 md:py-2 flex items-center border-black/5 border-b relative"
   >
-    <transition
-      enter-active-class="animate__animated animate__fadeIn duration"
-      leave-active-class="animate__animated animate__fadeOut duration"
-    >
-      <button
-        v-if="searchBar"
-        @click="searchBar = false"
-        class="fixed inset-0 w-full h-full cursor-default bg-black/20 backdrop-blur-md z-50"
-      ></button>
-    </transition>
     <!-- desktop -->
     <div class="hidden md:block relative w-full">
       <div class="w-full flex justify-between items-center z-50">
@@ -153,13 +143,25 @@
         </ul>
       </div>
     </div>
+
+    <!-- autoCompleteSearchQuery -->
+    <transition
+      enter-active-class="animate__animated animate__fadeIn duration"
+      leave-active-class="animate__animated animate__fadeOut duration"
+    >
+      <button
+        v-if="searchBar"
+        @click="searchBar = false"
+        class="fixed inset-0 w-full h-full cursor-default bg-black/20 backdrop-blur-md z-50"
+      ></button>
+    </transition>
     <transition
       enter-active-class="animate__animated animate__fadeIn duration"
       leave-active-class="animate__animated animate__fadeOut duration"
     >
       <div
         v-if="searchBar"
-        class="sm:w-[35rem] w-full px-2 absolute top-10 left-1/2 -translate-x-1/2 z-50"
+        class="sm:w-[35rem] w-full px-2 fixed top-10 left-1/2 -translate-x-1/2 z-50"
       >
         <SearchBar
           customClass="rounded-t-md"
@@ -245,6 +247,7 @@ export default {
         },
       })
       this.searchBar = false
+      this.search = ''
     },
     bgFixed() {
       const elem = document.querySelector('body')
