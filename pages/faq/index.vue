@@ -12,7 +12,7 @@
       </template>
     </PageHeader>
     <div
-      class="text-Secondary md:flex gap-x-10 h-full w-full md:px-10 px-4 md:my-28 my-16 max-w-[1200px] mx-auto"
+      class="text-Secondary md:flex gap-x-10 h-full w-full md:px-10 px-4 md:my-28 my-16 max-w-[2000px] mx-auto"
     >
       <div
         class="font-Roboto md:text-base text-sm gap-5 md:sticky top-14 h-full md:mb-0 mb-10"
@@ -67,7 +67,7 @@
         </div>
       </div>
       <div class="grid grid-cols-1 gap-5 mx-auto">
-        <div id="shipment" class="max-w-[40rem] md:px-5">
+        <div id="shipment" class="max-w-[60rem] md:px-5">
           <h1 class="text-2xl md:mb-10 mb-8 font-Playfair">Shipment</h1>
           <div
             v-for="(shipmentFaq, index) in shipmentFaq"
@@ -80,7 +80,7 @@
             <p class="text-Secondary/80">{{ shipmentFaq.answer }}</p>
           </div>
         </div>
-        <div id="payment" class="max-w-[40rem] md:px-5">
+        <div id="payment" class="max-w-[60rem] md:px-5">
           <h1 class="text-2xl md:mb-10 mb-8 font-Playfair">Payment</h1>
           <div
             v-for="(paymentFaq, index) in paymentFaq"
@@ -93,7 +93,7 @@
             <p class="text-Secondary/80">{{ paymentFaq.answer }}</p>
           </div>
         </div>
-        <div id="other" class="max-w-[40rem] md:px-5">
+        <div id="other" class="max-w-[60rem] md:px-5">
           <h1 class="text-2xl md:mb-10 mb-8 font-Playfair">Other</h1>
           <div v-for="(otherFaq, index) in otherFaq" :key="index" class="mb-7">
             <h1 class="text-Secondary text-lg mb-1.5">
