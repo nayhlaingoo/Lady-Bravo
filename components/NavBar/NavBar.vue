@@ -164,8 +164,8 @@
         class="sm:w-[35rem] w-full px-2 fixed top-10 left-1/2 -translate-x-1/2 z-50"
       >
         <SearchBar
-          customClass="rounded-t-md"
           v-model="search"
+          customClass="rounded-t-md"
           placeHolder="Search by name..."
           class="w-full"
         />
