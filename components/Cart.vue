@@ -105,40 +105,40 @@
         <div v-if="product">
           <div>
             <div class="border-bgPri border-b py-2 flex">
-              <p class="w-24">name:</p>
+              <p class="w-24">Name:</p>
               {{ product.category }}
             </div>
             <div class="border-bgPri border-b py-2 flex">
-              <p class="w-24">about:</p>
+              <p class="w-24">Description:</p>
               <span class="sm:w-96 w-[70%]">
                 {{ product.caption }}
               </span>
             </div>
             <div class="border-bgPri border-b py-2 flex">
-              <p class="w-24">country:</p>
+              <p class="w-24">Country:</p>
               {{ product.detail.country }}
             </div>
             <div class="border-bgPri border-b py-2 flex">
-              <p class="w-24">weight:</p>
+              <p class="w-24">Weight:</p>
               {{ product.detail.weight }}cm
             </div>
             <div class="border-bgPri border-b py-2 flex">
-              <p class="w-24">height:</p>
+              <p class="w-24">Height:</p>
               {{ product.detail.height }}cm
             </div>
             <div class="border-bgPri border-b py-2 flex">
-              <p class="w-24">width:</p>
+              <p class="w-24">Width:</p>
               {{ product.detail.width }}cm
             </div>
             <div class="border-bgPri border-b py-2 flex">
-              <p class="w-24">lenght:</p>
+              <p class="w-24">Lenght:</p>
               {{ product.detail.length }}cm
             </div>
             <div
               class="flex justify-between items-center border-bgPri border-b py-2"
             >
               <div class="flex">
-                <p class="w-24">total:</p>
+                <p class="w-24">Total:</p>
                 {{ product.qty }}
               </div>
               <div class="flex gap-4">
@@ -157,7 +157,7 @@
               </div>
             </div>
             <div class="border-bgPri border-b py-2 flex">
-              <p class="w-24">price:</p>
+              <p class="w-24">Price:</p>
               {{ product.price * product.qty }}ks
             </div>
           </div>

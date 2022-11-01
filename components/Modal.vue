@@ -65,7 +65,7 @@ export default {
           >
             <div class="flex justify-between items-center">
               <div>
-                <p class="text-2xl font-Playfair mb-4">{{ title }}</p>
+                <p class="text-2xl font-Playfair mb-4 text-Primary">{{ title }}</p>
                 <p class="text-xs text-gray-600 font-medium mb-4">
                   {{ description }}
                 </p>
