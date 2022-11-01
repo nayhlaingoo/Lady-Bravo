@@ -141,7 +141,7 @@
                 <p class="w-24">total:</p>
                 {{ product.qty }}
               </div>
-              <div class="flex gap-3">
+              <div class="flex gap-4">
                 <button
                   @click="decreaseQty(product)"
                   class="bg-red-200 select-none border-red-400 border-[1px] text-red-600 rounded-full w-5 h-5 flex items-center justify-center"
@@ -166,6 +166,11 @@
           <ButtonSecondary
             @click="modalOpen = false"
             label="Submit"
+            class="rounded-md mt-16"
+          />
+          <ButtonSecondary
+            @click="removeProduct(product)"
+            label="Remove"
             class="rounded-md mt-16"
           />
         </template>
@@ -244,8 +249,14 @@ export default {
       decreaseQty.qty--
       if (decreaseQty.qty === 0) {
         this.products.splice(index, 1)
+        this.modalOpen = false
       }
       console.log('decrease Qty', item)
+    },
+    removeProduct(item) {
+      let remove = this.products.findIndex((product) => product.id === item.id)
+      this.products.splice(remove, 1)
+      this.modalOpen = false
     },
     selectProduct(item) {
       this.product = item

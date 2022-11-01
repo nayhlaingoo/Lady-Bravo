@@ -70,7 +70,7 @@ export default {
                   {{ description }}
                 </p>
               </div>
-              <button
+              <!-- <button
                 @click="closeModal"
                 class="flex justify-center items-center flex-shrink-0 bg-bgPri hover:rotate-180 duration-300 rounded-full w-8 h-8 cursor-pointer self-start"
               >
@@ -88,7 +88,7 @@ export default {
                     d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
-              </button>
+              </button> -->
             </div>
             <slot />
             <div class="mt-auto">
